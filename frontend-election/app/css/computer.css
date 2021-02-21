@@ -1,0 +1,12 @@
+:root {
+    --footer: #41b3a3; /*footer */
+    --header: #FF873A; /*header */
+    --hovedside:#EBEDEF; /*main */
+    --forms: #333333; /*forms and stuff */
+  }
+
+@media screen and (min-width: 992px) {
+    a:hover {
+        border: 1px solid black !important;
+    }
+} 
