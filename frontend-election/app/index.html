@@ -12,11 +12,29 @@
   <link rel="stylesheet" href="css/computer.css">
   <link rel="stylesheet" href="css/mobile.css">
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
 </head>
-<div class="nav-area nav-color">
-  <div class="nav-center"><a href="#!/view1">View1</a></div>
-  <div class="nav-center"><a href="#!/view2">View2</a></div>
-  <div class="nav-center"><a href="#!/home">Home</a></div>
+<div class="nav-area nav-color nav-center">
+  <div>
+    <a href="#!/home">
+      <i class="fas fa-home"></i>
+    </a>
+  </div>
+  <div>
+    <a href="#!/view1">
+      <i class="fas fa-user"></i>
+    </a>
+  </div>
+  <div>
+    <a href="#!/view2">
+      <i class="fas fa-comments"></i>
+    </a>
+  </div>
+  <div>
+    <a href="#!/vote">
+      <i class="fas fa-vote-yea"></i>
+    </a>
+  </div>
 </div>
 <body>
   <div ng-view></div>
@@ -27,6 +45,7 @@
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="home/home.js"></script>
+  <script src="vote/vote.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="core/version/version.js"></script>
