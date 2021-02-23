@@ -1,0 +1,9 @@
+<div ng-controller="View1Ctrl">
+    <button ng-click="myNumber = myNumber + 1"> click me</button>
+    {{ myNumber }}
+    {{ nominatedUsers[0] }}
+    <ul ng-repeat="nominees in nominatedUsers">
+        <li>{{nominees.faculty}}</li>
+    </ul>
+    <p>This is the partial for view 1.</p>
+</div>

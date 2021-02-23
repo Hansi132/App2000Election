@@ -28,15 +28,23 @@ body {
 }
 
 .nav-area {
-  vertical-align: bottom;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   height: 50px;
 }
 
+i {
+  text-decoration: none;
+  padding: 4vw;
+  font-size: 25px;
+  color: black;
+}
+
 .nav-center {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-color {
