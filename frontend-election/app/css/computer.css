@@ -6,7 +6,18 @@
   }
 
 @media screen and (min-width: 992px) {
-    a:hover {
-        border: 1px solid black !important;
+
+    .nav-area {
+
+
+        top: 0;
+        
+        width: 100vw;
+        height: 50px;
     }
+
+    .ng-binding {
+        margin-top: 50px;
+    }
+
 } 
