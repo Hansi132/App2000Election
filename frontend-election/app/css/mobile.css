@@ -3,8 +3,8 @@
 /* variabler med farger */
 :root {
   --footer: #41b3a3; /*footer */
-  --header: #ff873a; /*header */
-  --hovedside: #ebedef; /*main */
+  --header: white; /*header */
+  --hovedside: white; /*main */
   --forms: #333333; /*forms and stuff */
 }
 
@@ -53,4 +53,15 @@ i {
 
 a {
   text-decoration: none;
+}
+
+h1.ng-binding  {
+  margin-top: 50px;
+  text-align: center;
+  color: #12232E;
+
+}
+p.ng-binding {
+  padding-left: 2vw;
+  color: #12232E;
 }

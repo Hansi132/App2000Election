@@ -1,7 +1,7 @@
 :root {
     --footer: #41b3a3; /*footer */
-    --header: #FF873A; /*header */
-    --hovedside:#EBEDEF; /*main */
+    --header: white; /*header */
+    --hovedside: white; /*main */
     --forms: #333333; /*forms and stuff */
   }
 
@@ -11,7 +11,7 @@
 
 
         top: 0;
-        
+
         width: 100vw;
         height: 50px;
     }
