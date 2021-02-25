@@ -18,7 +18,7 @@
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
 </head>
-<header class="headerTest">
+<header class="headerTest" style="width: 100px">
     <div class="divTest" style="display: table; margin: 0 auto;">
         <ul class="ulTest" ng-init="pressed = false;">
             <li style="box-sizing: border-box;" class="nav-center" title="Home">
@@ -30,16 +30,14 @@
             <!-- har kommentert ut ikonene hvis vi vil ha de til senere -->
             <li style="box-sizing: border-box;" class="nav-center">
                 <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
-                    <span>View 1</span>
-                    <span ng-if="pressed">View1</span>
                     <i class="fas fa-user"></i>
+                    <span ng-if="pressed">View1</span>
                 </a>
             </li >
             <li style="box-sizing: border-box;" class="nav-center">
                 <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
-                    <span>View 2</span>
-                    <span ng-if="pressed">view2</span>
                     <i class="fas fa-comments"></i>
+                    <span ng-if="pressed">view2</span>
                 </a>
             </li>
             <li style="box-sizing: border-box;" class="nav-center">
@@ -53,7 +51,12 @@
     <div>
         <ul class="ulTest" style="bottom: -100px">
             <li style="vertical-align: bottom">
-                <span ng-click="pressed = !pressed">Expand</span>
+                <div ng-click="pressed = !pressed">
+                    <i ng-if="pressed" class="fas fa-angle-left"></i>
+                </div>
+                <div ng-click="pressed = !pressed">
+                    <i ng-if="!pressed" class="fas fa-angle-right"></i>
+                </div>
                 <i ></i>
             </li>
         </ul>
