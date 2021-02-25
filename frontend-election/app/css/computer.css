@@ -95,5 +95,10 @@
         min-width: 54px;
     }
 
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr !important;
+    }
+
 
 } 
