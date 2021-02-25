@@ -33,13 +33,54 @@
     /*navbar buttons hover*/
     a.button_small:hover
     {
-        border: 2px solid lightgrey;
+        border: 1px solid lightgrey;
     }
 
  /*slideshow str desktop*/
     .card {
         max-width: 700px;
         max-height: 400px;
+    }
+
+    .headerTest {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 54px;
+        z-index: 100;
+        background-color: grey;
+    }
+
+    .divTest {
+        box-sizing: border-box;
+        flex: 1 0 auto;
+    }
+
+    .ulTest {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    a {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    span {
+        text-align: center;
     }
 
 } 

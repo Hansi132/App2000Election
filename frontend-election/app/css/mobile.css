@@ -36,7 +36,6 @@ body {
 
 i {
   text-decoration: none;
-  padding: 4vw;
   font-size: 25px;
   color: black;
 }
@@ -70,16 +69,15 @@ a.button_small
   background-color: white;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  margin: 1vw;
   max-height: 50px;
   min-height: 50px;
   font-weight: bold;
   color: black;
-  padding: 0px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
+  min-width: 54px;
 }
 
 
