@@ -52,7 +52,7 @@
         flex-direction: column;
         width: 54px;
         z-index: 100;
-        background-color: grey;
+        background-image: linear-gradient(to right, lightgrey, whitesmoke, white);
     }
 
     .divTest {
@@ -80,7 +80,20 @@
     }
 
     span {
+
+        margin-top: 15px;
+        margin-left: 5px;
+        border-radius: 5px;
+        max-height: 50px;
+        min-height: 50px;
+        font-weight: bold;
+        color: black;
         text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        min-width: 54px;
     }
+
 
 } 
