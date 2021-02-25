@@ -8,13 +8,10 @@
 @media screen and (min-width: 992px) {
 
     .nav-area {
-
-
         top: 0;
         height: 100px;
 
         width: 100vw;
-
     }
 
     .ng-binding {
@@ -26,9 +23,6 @@
         min-width: 80px;
     }
 
-    h1.ng-binding {
-
-    }
 
     h1.ng-binding:hover {
         font-size: 5em;
@@ -37,8 +31,7 @@
 
     a.button_small:hover {
         opacity: 0.8;
-        border: 2px solid black;
-
+        border: 1px solid black;
     }
 
     #test:hover {

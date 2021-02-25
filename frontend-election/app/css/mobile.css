@@ -32,10 +32,7 @@ body {
   position: fixed;
   bottom: 0;
   width: 100vw;
-
-
 }
-
 
 i {
   text-decoration: none;
@@ -47,8 +44,6 @@ i {
 .nav-center {
   display: inline-flex;
   align-items: center;
-
-
 }
 
 .nav-color {
@@ -60,23 +55,17 @@ a {
 }
 
 h1.ng-binding  {
-
   text-align: center;
   color: black;
   /*background-image: url("../images/usn1.jpg"); */
   opacity: 0.6;
   margin-left: auto;
   margin-right: auto;
-
-
-
-
 }
 
 p.ng-binding {
   padding-left: 2vw;
   color: #12232E;
-
 }
 
 /* Knapper til navbar*/
@@ -103,10 +92,7 @@ a.button_small
   margin-right: auto;
   width: 208px;
   height: 270px;
-
 }
-
-
 
 /* slideshow */
 
@@ -120,23 +106,17 @@ body {
   align-items: center;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-
-
 }
-
 
 .card {
   position: relative;
-
   width: 300px;
   height: 200px;
   overflow: hidden;
-
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -148,11 +128,9 @@ body {
   left: 0;
   top: 0;
   z-index: 900;
-
   display: block;
   width: 100%;
   height: 100%;
-
   background-color: rgba(140, 22, 115, 0.2);
 }
 
@@ -161,7 +139,6 @@ body {
   top: 0;
   left: 0;
   z-index: 7;
-
   display: flex;
   align-items: center;
   width: 100%;
@@ -172,7 +149,6 @@ body {
 
   animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
 }
-
 
 .card_part.card_part-two {
   z-index: 6;
