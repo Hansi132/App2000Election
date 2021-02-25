@@ -26,7 +26,7 @@ body {
   padding: 0 0;
   line-height: 1.4;
 }
-
+/*flytter navbar til bunn på tlf*/
 .nav-area {
   overflow: hidden;
   position: fixed;
@@ -45,7 +45,7 @@ i {
   display: inline-flex;
   align-items: center;
 }
-
+/*lager den grå skyggen på navbar*/
 .nav-color {
   background-image: linear-gradient(whitesmoke, whitesmoke, white);
 }
@@ -54,25 +54,21 @@ a {
   text-decoration: none;
 }
 
+/*Tittel på hjemsiden*/
 h1.ng-binding  {
   text-align: center;
   color: black;
-  /*background-image: url("../images/usn1.jpg"); */
   opacity: 0.6;
   margin-left: auto;
   margin-right: auto;
 }
 
-p.ng-binding {
-  padding-left: 2vw;
-  color: #12232E;
-}
 
 /* Knapper til navbar*/
 a.button_small
 {
   background-color: white;
-  border: 2px solid lightgrey;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   margin: 1vw;
   max-height: 50px;
@@ -86,13 +82,6 @@ a.button_small
   font-size: 14px;
 }
 
-.image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 208px;
-  height: 270px;
-}
 
 /* slideshow */
 
