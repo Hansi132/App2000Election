@@ -1,61 +1,65 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/computer.css">
-  <link rel="stylesheet" href="css/mobile.css">
-  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/computer.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
 </head>
 <div class="nav-area nav-color nav-center">
-  <div >
-    <a href="#!/home">
+    <div>
+        <a href="#!/home">
 
-      <i id="test" class="fas fa-home"></i>
-    </a>
-  </div>
+            <i id="test" class="fas fa-home"></i>
+        </a>
+    </div>
 
-            <!-- har kommentert ut ikonene hvis vi vil ha de til senere -->
-  <div>
-    <a class="button_small" href="#!/view1">
-      <p> View 1</p>
-     <!-- <i class="fas fa-user"></i> -->
-    </a>
-  </div>
-  <div>
-    <a  class="button_small" href="#!/view2">
-      <p> View 2</p>
-     <!-- <i class="fas fa-comments"></i> -->
-    </a>
-  </div>
-  <div>
-    <a class="button_small" href="#!/vote">
-      <p> Vote</p>
-     <!-- <i class="fas fa-vote-yea"></i> -->
-    </a>
-  </div>
+    <!-- har kommentert ut ikonene hvis vi vil ha de til senere -->
+    <div>
+        <a class="button_small" href="#!/view1">
+            <p> View 1</p>
+            <!-- <i class="fas fa-user"></i> -->
+        </a>
+    </div>
+    <div>
+        <a class="button_small" href="#!/view2">
+            <p> View 2</p>
+            <!-- <i class="fas fa-comments"></i> -->
+        </a>
+    </div>
+    <div>
+        <a class="button_small" href="#!/vote">
+            <p> Vote</p>
+            <!-- <i class="fas fa-vote-yea"></i> -->
+        </a>
+    </div>
 </div>
 <body>
-  <div ng-view></div>
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="home/home.js"></script>
-  <script src="vote/vote.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="core/version/version.js"></script>
-  <script src="core/version/version-directive.js"></script>
-  <script src="core/version/interpolate-filter.js"></script>
+<div ng-view></div>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="home/home.js"></script>
+<script src="vote/vote.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="core/version/version.js"></script>
+<script src="core/version/version-directive.js"></script>
+<script src="core/version/interpolate-filter.js"></script>
 </body>
 </html>
