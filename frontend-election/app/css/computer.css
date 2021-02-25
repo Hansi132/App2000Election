@@ -23,12 +23,6 @@
         min-width: 80px;
     }
 
-
-    h1.ng-binding:hover {
-        font-size: 5em;
-        opacity: 0.8;
-    }
-
     a.button_small:hover {
         opacity: 0.8;
         border: 1px solid black;
@@ -37,6 +31,9 @@
     #test:hover {
         color: darkslategrey;
 
+    }
+    .title-home {
+        padding: 50px;
     }
 
     a.button_small:hover
