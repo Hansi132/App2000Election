@@ -54,18 +54,13 @@
         display: inline-block;
         font-size: 14px;
     }
-    .image {
 
-        min-width: 416px;
-        min-height: 541px;
-
-    }
 
     .card {
 
 
-        min-width: 700px;
-        min-height: 400px;
+        max-width: 700px;
+        max-height: 400px;
 
     }
 
