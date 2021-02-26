@@ -13,6 +13,13 @@
         width: 100vw;
     }
 
+    .nav-center {
+        margin: 15px;
+    }
+    .headerTest {
+        max-width: 100px;
+    }
+
     .ng-binding {
         margin-top: 150px;
     }
@@ -40,7 +47,100 @@
     .card {
         max-width: 700px;
         max-height: 400px;
+
     }
+    /* ------------------- slideshow -------------------------------*/
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        position: relative;
+        width: 60vw;
+        height: 40vw;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /*Light blue cover above the slide show*/
+    .card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 900;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(140, 22, 115, 0.2);
+    }
+
+    .card_part {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 7;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transform: translateX(700px);
+        background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/1.jpg?raw=true);
+        background-size: cover;
+        animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+    }
+
+    .card_part.card_part-two {
+        z-index: 6;
+        background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/2.jpg?raw=true);
+        animation-delay: 7s;
+    }
+
+    .card_part.card_part-three {
+        z-index: 5;
+        background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/3.jpg?raw=true);
+        animation-delay: 14s;
+    }
+
+    .card_part.card_part-four {
+        z-index: 4;
+        background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/4.jpg?raw=true);
+        animation-delay: 21s;
+    }
+
+
+    @keyframes opaqTransition {
+        3% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(0);
+        }
+        28% {
+            transform: translateX(-700px);
+        }
+        100% {
+            transform: translateX(-700px);
+        }
+    }
+
+    /*------------------------- NAVBAR ------------------------------*/
 
     .headerTest {
         box-sizing: border-box;
@@ -50,9 +150,9 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        width: 54px;
+        width: 100px;
         z-index: 100;
-        background-image: linear-gradient(to right, lightgrey, whitesmoke, white);
+        background-image: linear-gradient(to right, grey, lightgrey, white);
     }
 
     .divTest {
@@ -66,6 +166,7 @@
         display: flex;
         flex-flow: column;
         align-items: center;
+
     }
 
     a {
@@ -78,6 +179,7 @@
     a:visited {
         color: black;
     }
+
 
     span {
 
@@ -101,4 +203,4 @@
     }
 
 
-} 
+}
