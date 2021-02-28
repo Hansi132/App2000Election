@@ -26,4 +26,8 @@ public class UserService {
     public List<User> getAllUsers() throws SQLException {
         return userDB.selectAllUsers();
     }
+
+    public User selectOneUser(int id) throws SQLException {
+        return userDB.selectOneUser(id);
+    }
 }

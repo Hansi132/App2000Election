@@ -1,5 +1,6 @@
 package com.app2000.electionbackend.db;
 
+import com.app2000.electionbackend.exception.UserNotFoundException;
 import com.app2000.electionbackend.model.User;
 import com.app2000.electionbackend.util.DatabaseConnection;
 import org.springframework.stereotype.Repository;
@@ -57,5 +58,25 @@ public class UserDataAccess implements UserDB {
             userList.add(user);
         }
         return userList;
+    }
+
+    @Override
+    public User selectOneUser(int id) throws SQLException {
+        String selectSql = "SELECT * FROM User WHERE UserId = ?;";
+        PreparedStatement selectStmt = connection.prepareStatement(selectSql);
+        selectStmt.setInt(1, id);
+        ResultSet resultSet = selectStmt.executeQuery();
+        if (resultSet.next()) {
+            return new User(
+                    resultSet.getInt("UserId"),
+                    resultSet.getString("Email"),
+                    resultSet.getString("FName"),
+                    resultSet.getString("LName"),
+                    "",
+                    resultSet.getString("FDate"),
+                    resultSet.getString("Gender"));
+        } else {
+            throw new UserNotFoundException("No user is found with that id");
+        }
     }
 }
