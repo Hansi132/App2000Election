@@ -35,9 +35,11 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
         insertStmt.setInt(5, nominatedPerson.getVotes());
         insertStmt.setInt(6, nominatedPerson.getPictureId());
         insertStmt.execute();
+        connection.close();
         return 1;
     }
 
+    @Override
     public List<NominatedPerson> getAllNominatedPerson() throws SQLException {
         List<NominatedPerson> nominatedPersonList = new ArrayList<>();
         String selectSql = "SELECT * FROM NominatedPerson;";
@@ -53,6 +55,7 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
                     resultSet.getInt("PictureId"));
             nominatedPersonList.add(nominatedPerson);
         }
+        connection.close();
         return nominatedPersonList;
     }
 }

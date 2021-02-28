@@ -37,6 +37,7 @@ public class UserDataAccess implements UserDB {
         insertStmt.setString(6, user.getGender());
         insertStmt.execute();
         System.out.print("We got here");
+        connection.close();
         return 1;
     }
 
@@ -57,6 +58,7 @@ public class UserDataAccess implements UserDB {
                     resultSet.getString("Gender"));
             userList.add(user);
         }
+        connection.close();
         return userList;
     }
 
@@ -67,6 +69,7 @@ public class UserDataAccess implements UserDB {
         selectStmt.setInt(1, id);
         ResultSet resultSet = selectStmt.executeQuery();
         if (resultSet.next()) {
+            connection.close();
             return new User(
                     resultSet.getInt("UserId"),
                     resultSet.getString("Email"),
@@ -76,6 +79,7 @@ public class UserDataAccess implements UserDB {
                     resultSet.getString("FDate"),
                     resultSet.getString("Gender"));
         } else {
+            connection.close();
             throw new UserNotFoundException("No user is found with that id");
         }
     }
