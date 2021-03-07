@@ -2,6 +2,7 @@ package com.app2000.electionbackend.test;
 
 import com.app2000.electionbackend.db.NominatedPersonDataAccess;
 import com.app2000.electionbackend.model.NominatedPerson;
+import com.app2000.electionbackend.util.JsonPrinter;
 import com.fasterxml.jackson.databind.JsonSerializable;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,9 +28,7 @@ public class NominatedPersonTest {
     @Test
     public void getAllNominatedPerson() throws SQLException {
         List<NominatedPerson> list = new NominatedPersonDataAccess().getAllNominatedPerson();
-        Gson gson = new Gson();
-        String toJson = gson.toJson(list);
-        log.info("Recieved: " + list.size() + " nominated persons\n" + toJson);
+        log.info("Recieved: " + list.size() + " nominated persons\n" + JsonPrinter.print(list));
     }
 
 }
