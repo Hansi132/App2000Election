@@ -23,39 +23,39 @@
         <ul class="ulTest" ng-init="pressed = false;">
             <li style="box-sizing: border-box;" class="nav-center" title="Home">
                 <a href="#!/home">
-                    <i id="test" class="fas fa-home"></i>
+                    <i id="icon" class="fas fa-home"></i>
                     <span ng-if="pressed">Home</span>
                 </a>
             </li>
-            <!-- har kommentert ut ikonene hvis vi vil ha de til senere -->
+
             <li style="box-sizing: border-box;" class="nav-center">
                 <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
-                    <i class="fas fa-user"></i>
+                    <i id="icon1" class="fas fa-user"></i>
                     <span ng-if="pressed">View1</span>
                 </a>
             </li >
             <li style="box-sizing: border-box;" class="nav-center">
                 <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
-                    <i class="fas fa-comments"></i>
+                    <i id="icon2" class="fas fa-comments"></i>
                     <span ng-if="pressed">view2</span>
                 </a>
             </li>
             <li style="box-sizing: border-box;" class="nav-center">
                 <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
-                    <i class="fas fa-vote-yea"></i>
+                    <i id="icon3" class="fas fa-vote-yea"></i>
                     <span ng-if="pressed">Vote</span>
                 </a>
             </li>
         </ul>
     </div>
-    <div>
+    <div id="nav-expand-button">
         <ul id="remove-phone" class="ulTest" style="bottom: -100px">
             <li style="vertical-align: bottom">
                 <div ng-click="pressed = !pressed">
-                    <i ng-if="pressed" class="fas fa-angle-left"></i>
+                    <i id="bigger" ng-if="pressed" class="fas fa-angle-left"></i>
                 </div>
                 <div ng-click="pressed = !pressed">
-                    <i ng-if="!pressed" class="fas fa-angle-right"></i>
+                    <i id="bigger1" ng-if="!pressed" class="fas fa-angle-right"></i>
                 </div>
                 <i ></i>
             </li>
