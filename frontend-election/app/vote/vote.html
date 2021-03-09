@@ -1,8 +1,33 @@
 <div class="grid-container">
 
-    <div ng-controller="VoteCtrl" class="box1">
+    <div ng-controller="VoteCtrl" class="box1"><!-- Dette er et slideshow -->
+        <div >
 
-    <h1 class="title-home">Avstemning</h1>
+
+            <div class="card">
+
+                <div class="card_part card_part-one">
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="card_part card_part-two">
+
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="card_part card_part-three">
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="card_part card_part-four">
+                </div>
+
+            </div>
+        </div>
+
+    <h1 class="title-home">Her kan du stemme på den kandidaten du mener fortjener å vinne USN sitt skolevalg 2021.</h1>
+
+
 
     <ul ng-repeat="user in users">
         <li>{{ user.fname }}</li>
