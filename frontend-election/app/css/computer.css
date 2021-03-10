@@ -7,6 +7,19 @@
 
 @media screen and (min-width: 992px) {
 
+    body {
+
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+    }
+
     .nav-area {
         top: 0;
         height: 100px;
@@ -55,20 +68,9 @@
     *::after {
         box-sizing: border-box;
     }
-
-    html,
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
+    
     .card {
+
         position: relative;
         width: 60vw;
         height: 40vw;
@@ -152,6 +154,7 @@
         width: 100px;
         z-index: 100;
         border-right: 2px solid whitesmoke;
+
     }
 
     .divTest {
@@ -231,7 +234,7 @@
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr !important;
-        grid-template-rows: 1fr 1fr 1fr !important;
+        grid-template-rows: 234px 1fr 1fr  !important;
     }
 
     .box1 {
@@ -239,7 +242,37 @@
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
+        text-align: center;
+
+    }
+
+    /*------------------------- HEADER ------------------------------*/
+    .header{
+        text-align: center;
+        font-size: 2rem;
+
+    }
+    .headerBox {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 1;
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
