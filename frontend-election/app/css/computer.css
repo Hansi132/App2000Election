@@ -56,90 +56,28 @@
         border: 1px solid lightgrey;
     }
 
- /*slideshow str desktop*/
-    .card {
-        max-width: 700px;
-        max-height: 400px;
 
-    }
-    /* ------------------- slideshow -------------------------------*/
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+    /* ------------------- picture card -------------------------------*/
+
     
-    .card {
-
-        position: relative;
-        width: 60vw;
-        height: 40vw;
-        overflow: hidden;
-        border-radius: 5px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /*Light blue cover above the slide show*/
-    .card::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 900;
-        display: block;
-        width: 100%;
-        height: 100%;
-
-    }
-
-    .card_part {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 7;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        transform: translateX(700px);
+    .picture-card {
         background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/gjen/2018/7/24/10/USN%2BVestfold_1.jpg?chk=1D5C81);
         background-size: cover;
-        animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+        align-content: center;
+        width: 600px;
+        height: 300px;
+        align-self: center;
     }
 
-    .card_part.card_part-two {
-        z-index: 6;
+
+
+/*
         background-image: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1063184564%2F960x0.jpg%3Ffit%3Dscale);
-        animation-delay: 7s;
-    }
-
-    .card_part.card_part-three {
-        z-index: 5;
-        background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
-        animation-delay: 14s;
-    }
-
-    .card_part.card_part-four {
-        z-index: 4;
-        background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/4.jpg?raw=true);
-        animation-delay: 21s;
-    }
+        animation-delay: 7s;   background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
 
 
-    @keyframes opaqTransition {
-        3% {
-            transform: translateX(0);
-        }
-        25% {
-            transform: translateX(0);
-        }
-        28% {
-            transform: translateX(-700px);
-        }
-        100% {
-            transform: translateX(-700px);
-        }
-    }
+*/
+
 
     /*------------------------- NAVBAR ------------------------------*/
 
