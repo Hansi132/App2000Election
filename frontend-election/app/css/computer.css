@@ -16,7 +16,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        overflow: hidden;
+
 
     }
 
@@ -48,7 +48,7 @@
     }
     /*tittel på hjemsiden*/
     .title-home {
-        padding: 50px;
+        margin: 0;
     }
     /*navbar buttons hover*/
     a.button_small:hover
@@ -57,23 +57,24 @@
     }
 
 
-    /* ------------------- picture card -------------------------------*/
+    /* ------------------- picture card (box2) -------------------------------*/
 
     
     .picture-card {
-        background-image: url(https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_2000_2000_s_f/0000/gjen/2018/7/24/10/USN%2BVestfold_1.jpg?chk=1D5C81);
-        background-size: cover;
-        align-content: center;
-        width: 600px;
-        height: 300px;
-        align-self: center;
+        min-width: 600px;
+        min-height: 300px;
+        max-width: 600px;
+        max-height: 200px;
+        border-radius: 5px;
+        box-shadow: 3px 5px 3px grey;
+
     }
 
 
 
 /*
         background-image: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1063184564%2F960x0.jpg%3Ffit%3Dscale);
-        animation-delay: 7s;   background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
+        background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
 
 
 */
@@ -169,20 +170,13 @@
         min-width: 54px;
     }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr !important;
-        grid-template-rows: 234px 1fr 1fr  !important;
+
+
+    #remove-phone {
+        margin: 0;
     }
 
-    .box1 {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        text-align: center;
 
-    }
 
     /*------------------------- HEADER ------------------------------*/
     .header{
@@ -199,11 +193,40 @@
 
 
 
+    /*-------------------------GRID ------------------------------*/
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+        grid-template-rows: 100px 1fr 1fr  !important;
+    }
 
+    /*Overskrift*/
+    .box1 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center;
+    }
+    /*Bilde*/
+    .box2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 0 auto;
+    }
+    /*------------------------- FOOTER ------------------------------*/
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border: 2px solid whitesmoke;
+        color: black;
+        text-align: center;
 
-
-
-
+    }
 
 
 

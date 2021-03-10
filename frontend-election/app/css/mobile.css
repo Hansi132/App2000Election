@@ -88,12 +88,26 @@
 
 
   /*-----------------------Tittel på hjemsiden-------------------*/
-  h1.ng-binding {
+   .title-home {
     text-align: center;
     color: black;
-    opacity: 0.6;
-    margin-left: auto;
-    margin-right: auto;
+     font-size: 1rem;
+
+  }
+  /*Overskrift*/
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+  }
+
+  /*-----------------------USN header-------------------*/
+
+  .header {
+    text-align: center;
+
   }
 
   /*------------grid container --------------*/
@@ -102,4 +116,28 @@
     grid-template-columns: 1fr;
     gap: 1em;
   }
+  /*------------remove footer --------------*/
+
+  .footer {
+    display: none;
+  }
+  /* ------------------- picture card (box2) -------------------------------*/
+
+
+  .picture-card {
+    width: 70vw;
+    border-radius: 5px;
+    box-shadow: 3px 5px 3px grey;
+
+
+  }
+  .box2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
 }
