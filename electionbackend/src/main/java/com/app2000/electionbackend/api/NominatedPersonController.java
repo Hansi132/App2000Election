@@ -25,7 +25,7 @@ public class NominatedPersonController {
         nominatedPersonService.addNominatedPerson(nominatedPerson);
     }
 
-    @GetMapping()
+    @GetMapping
     public List<NominatedPerson> getAllNominatedPersons() throws SQLException {
         return nominatedPersonService.getAllNominatedPersons();
     }

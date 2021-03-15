@@ -11,4 +11,6 @@ public interface UserDB {
     int insertUser(User user) throws SQLException;
 
     List<User> selectAllUsers() throws SQLException;
+
+    User selectOneUser(int id) throws SQLException;
 }
