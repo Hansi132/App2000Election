@@ -3,7 +3,7 @@
     --header: white; /*header */
     --hovedside: white; /*main */
     --forms: #333333; /*forms and stuff */
-  }
+}
 
 @media screen and (min-width: 992px) {
 
@@ -29,6 +29,7 @@
     .nav-center {
         margin: 15px;
     }
+
     .headerTest {
         max-width: 100px;
     }
@@ -41,25 +42,22 @@
         min-width: 80px;
     }
 
-
- /*hjem icon i navbar*/
+    /*hjem icon i navbar*/
     #test:hover {
         color: darkslategrey;
     }
+
     /*tittel på hjemsiden*/
     .title-home {
         margin: 0;
     }
+
     /*navbar buttons hover*/
-    a.button_small:hover
-    {
+    a.button_small:hover {
         border: 1px solid lightgrey;
     }
 
-
     /* ------------------- picture card (box2) -------------------------------*/
-
-    
     .picture-card {
         min-width: 600px;
         min-height: 300px;
@@ -69,19 +67,11 @@
         box-shadow: 3px 5px 3px grey;
 
     }
-
-
-
-/*
-        background-image: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1063184564%2F960x0.jpg%3Ffit%3Dscale);
-        background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
-
-
-*/
-
-
+    /*
+            background-image: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1063184564%2F960x0.jpg%3Ffit%3Dscale);
+            background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
+    */
     /*------------------------- NAVBAR ------------------------------*/
-
     .headerTest {
         box-sizing: border-box;
         position: fixed;
@@ -109,23 +99,26 @@
         align-items: center;
 
     }
+
     .nav-center {
         padding-bottom: 10px;
 
     }
+
     #icon {
-        font-size: 2rem ;
+        font-size: 2rem;
     }
+
     #icon1 {
-        font-size: 2rem ;
+        font-size: 2rem;
     }
 
     #icon2 {
-        font-size: 2rem ;
+        font-size: 2rem;
     }
 
     #icon3 {
-        font-size: 2rem ;
+        font-size: 2rem;
     }
 
     #nav-expand-button {
@@ -142,6 +135,7 @@
         padding: 15px;
         font-size: 1.5rem;
     }
+
     a {
         display: flex;
         flex-flow: column;
@@ -152,7 +146,6 @@
     a:visited {
         color: black;
     }
-
 
     span {
 
@@ -170,20 +163,17 @@
         min-width: 54px;
     }
 
-
-
     #remove-phone {
         margin: 0;
     }
 
-
-
     /*------------------------- HEADER ------------------------------*/
-    .header{
+    .header {
         text-align: center;
         font-size: 2rem;
 
     }
+
     .headerBox {
         grid-column-start: 1;
         grid-column-end: 5;
@@ -191,13 +181,11 @@
         grid-row-end: 1;
     }
 
-
-
     /*-------------------------GRID ------------------------------*/
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr !important;
-        grid-template-rows: 100px 1fr 1fr  !important;
+        grid-template-rows: 100px 1fr 1fr !important;
     }
 
     /*Overskrift*/
@@ -208,6 +196,7 @@
         grid-row-end: 2;
         text-align: center;
     }
+
     /*Bilde*/
     .box2 {
         grid-column-start: 2;
@@ -216,6 +205,7 @@
         grid-row-end: 3;
         margin: 0 auto;
     }
+
     /*------------------------- FOOTER ------------------------------*/
     .footer {
         position: fixed;
@@ -227,12 +217,6 @@
         text-align: center;
 
     }
-
-
-
-
-
-
 
 }
 
