@@ -35,7 +35,6 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
         insertStmt.setInt(5, nominatedPerson.getVotes());
         insertStmt.setInt(6, nominatedPerson.getPictureId());
         insertStmt.execute();
-        connection.close();
         return 1;
     }
 
@@ -55,7 +54,6 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
                     resultSet.getInt("PictureId"));
             nominatedPersonList.add(nominatedPerson);
         }
-        connection.close();
         return nominatedPersonList;
     }
 }

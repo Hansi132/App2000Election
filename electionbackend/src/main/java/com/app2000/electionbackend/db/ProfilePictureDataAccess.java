@@ -34,7 +34,6 @@ public class ProfilePictureDataAccess implements ProfilePictureDB{
             );
             list.add(profilePicture);
         }
-        connection.close();
         return list;
     }
 }
