@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('myApp.login', ['ngRoute'])
+angular.module('myApp.registerUser', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/login', {
-            templateUrl: 'login/login.html',
-            controller: 'loginCtrl'
+        $routeProvider.when('/registerUser', {
+            templateUrl: 'registerUser/registerUser.html',
+            controller: 'registerUser'
         })
     }])
 
-    .controller('loginCtrl', function ($scope) {
+    .controller('registerUser', function ($scope) {
 
     })

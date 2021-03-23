@@ -6,9 +6,9 @@ angular.module('myApp.login', ['ngRoute'])
         $routeProvider.when('/login', {
             templateUrl: 'login/login.html',
             controller: 'loginCtrl'
-        })
+        });
     }])
 
-    .controller('loginCtrl', function ($scope) {
+    .controller('loginCtrl', function loginCtrl($scope, $http){
 
-    })
+    });
