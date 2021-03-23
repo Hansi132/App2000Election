@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.home', ['ngRoute'])
+angular.module('myApp.home', ['ngRoute', 'ngCookies', 'ngSanitize'])
 
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/home', {
@@ -9,9 +9,10 @@ angular.module('myApp.home', ['ngRoute'])
     })
 }])
 
-.controller('homeCtrl', function ($scope) {
-    $scope.gui = {
-        "title": "Home",
-        "body": "This is the body"
+.controller('homeCtrl', function ($scope, $cookies, $sce) {
+    $scope.alertBox = "<alert alert-type=\"alert-error\" text=\"Hello world this is an alert\"></alert>"
+
+    $scope.infoScreen = function () {
+        return $sce.trustAsHtml($scope.alertBox)
     }
 })
