@@ -143,13 +143,25 @@
     grid-column-end: 4;
 
   }
-
   .button-box{
-    width: 250px;
+    width: 130px;
     margin: 35px auto;
     position: relative;
     box-shadow: 0 0 20px 9px #E5E7E9;
     border-radius: 30px;
+    background: linear-gradient(to right, #1E90FF,#87CEFA);
+    text-align: center;
+
+  }
+
+  .button-box1{
+    width: 130px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #E5E7E9;
+    border-radius: 30px;
+    background: linear-gradient(to right, #1E90FF,#87CEFA);
+    text-align: center;
   }
 
   .toggle-btn{
@@ -180,7 +192,7 @@
 
   }
   .input-field{
-    width: 80vw;
+    width: 70%;
     padding: 10px 0;
     margin: 5px 0;
     border-left: 0;
@@ -202,17 +214,19 @@
     border: 0;
     outline: none;
     border-radius: 30px;
+    box-shadow: 0 0 20px 9px #E5E7E9;
   }
 
-  .check-box{
-    margin: 30px 10px 30px 0;
-  }
-  span{
-    color:#777;
-    font-size: 18px;
-    top: 125px;
+  .box3 {
+
+    height: 30px;
+    align-items: center;
 
   }
+.p {
+  display: inline;
+}
+
 
 
 
