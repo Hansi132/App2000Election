@@ -1,9 +1,29 @@
 <div ng-controller="View1Ctrl">
-    <button ng-click="myNumber = myNumber + 1"> click me</button>
-    {{ myNumber }}
-    {{ nominatedUsers[0] }}
-    <ul ng-repeat="nominees in nominatedUsers">
-        <li>{{nominees.faculty}}</li>
-    </ul>
-    <p>This is the partial for view 1.</p>
+    <div class="grid-container">
+        <div class="box1">
+             <h1>Velkommen til min side "bruker"</h1>
+
+
+        </div>
+    <div class="box3">
+        <form class="input-group">
+
+            <div>
+                <h3> Oppdater brukerinformasjon!</h3>
+                <img src="https://i.pinimg.com/474x/67/c3/d6/67c3d63e215e034e01d45c8256d720d3.jpg" width="70px">
+                <button> Last opp bilde</button>
+            </div>
+            <input type="password" class="input-field" placeholder="Nytt passord">
+            <input type="password" class="input-field" placeholder="Nytt passord">
+            <input type="text" class="input-text" placeholder="Skriv gjerne noe om deg selv!">
+
+            <button type="submit" class="submit-btn">Oppdater bruker informasjon</button>
+
+        </form>
+
+
+
+
+    </div>
+    </div>
 </div>

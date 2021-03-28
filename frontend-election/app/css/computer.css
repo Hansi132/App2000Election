@@ -209,7 +209,57 @@
         grid-row-end: 3;
         margin: 0 auto;
     }
+    /*Boks på høyre side av siden*/
+    .box3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        padding-top: 30px;
 
+
+    }
+    /*Boks på venstre side av siden*/
+    .box4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+
+    }
+    .box5 {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+
+    }
+    /*------------------------- Top 5 på høyre side ------------------------------*/
+
+    .top5 {
+        margin-left: auto;
+        margin-right: 10px;
+        padding: 10px 10px;
+        list-style-type: none;
+        text-align: center;
+        max-width: 100px;
+        float: right;
+        grid-column: 4;
+        grid-row: 1;
+
+    }
+
+    .top5bilder {
+        width: 90px;
+        height: 90px;
+        padding-top: 5px;
+
+    }
+
+    .h3 {
+        margin: 0;
+    }
     /*------------------------- FOOTER ------------------------------*/
     .footer {
         position: fixed;
@@ -265,6 +315,16 @@
 
     }
 
+    .input-text {
+        width: 250px;
+        height: 70px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
 
 
     .input-group{
@@ -306,11 +366,7 @@
     #login{
     left: 120px;
     }
-    .box3 {
 
-
-
-    }
     .p {
         display: inline-block;
 
