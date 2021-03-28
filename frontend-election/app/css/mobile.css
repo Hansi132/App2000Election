@@ -26,6 +26,9 @@
     padding: 0 0;
     line-height: 1.4;
   }
+  #remove-phone-1 {
+    display: none;
+  }
 
   /*------------------------- NAVBAR ------------------------------*/
   #remove-phone {
@@ -153,6 +156,13 @@
     text-align: center;
 
   }
+  .input-text {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
   .button-box1{
     width: 130px;
@@ -218,11 +228,16 @@
   }
 
   .box3 {
-
     height: 30px;
     align-items: center;
-
+    grid-column-end: 4;
+    grid-column-start: 1;
   }
+
+  .box2 {
+    grid-column-end: 4;
+  }
+
 .p {
   display: inline;
 }

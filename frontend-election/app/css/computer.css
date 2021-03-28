@@ -181,7 +181,7 @@
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr !important;
-        grid-template-rows: 100px 1fr 1fr !important;
+        grid-template-rows: 100px 1fr 1fr 100px !important;
     }
 
     /*Overskrift*/
@@ -246,12 +246,13 @@
         max-width: 100px;
         float: right;
         grid-column: 4;
-        grid-row: 1;
+        position: fixed;
+        right: 0;
 
     }
 
     .top5bilder {
-        width: 90px;
+        width: 100px;
         height: 90px;
         padding-top: 5px;
 
@@ -269,6 +270,7 @@
         border: 2px solid whitesmoke;
         color: black;
         text-align: center;
+        margin-top: 30px;
 
     }
     /*------------------------- RegisterUser ------------------------------*/
