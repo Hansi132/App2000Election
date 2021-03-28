@@ -9,7 +9,7 @@ public class User {
     private final String email;
     private final String fName;
     private final String lName;
-    private final String password;
+    private String password;
     private final String fDate;
     private final String gender;
 
@@ -56,4 +56,8 @@ public class User {
     public String getGender() {
         return gender;
     }
+
+    public void setPassword(String password) {
+        this.password = password;
+    };
 }
