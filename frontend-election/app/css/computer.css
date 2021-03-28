@@ -167,7 +167,10 @@
     .header {
         text-align: center;
         font-size: 2rem;
-
+        margin-bottom: 0;
+    }
+    .header-h1 {
+        margin-bottom: 0;
     }
 
     .headerBox {
@@ -183,6 +186,12 @@
         grid-template-columns: 1fr 1fr 1fr 1fr !important;
         grid-template-rows: 100px 1fr 1fr 100px !important;
     }
+
+    .grid-container1 {
+        display: grid;
+
+    }
+
 
     /*Overskrift*/
     .box1 {
@@ -245,7 +254,6 @@
         text-align: center;
         max-width: 100px;
         float: right;
-        grid-column: 4;
         position: fixed;
         right: 0;
 

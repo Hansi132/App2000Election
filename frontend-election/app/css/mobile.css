@@ -45,7 +45,7 @@
     bottom: 0;
     width: 100vw;
     left: 0;
-
+    background-color: white;
   }
 
   i {
@@ -196,7 +196,7 @@
 
   .input-group{
 
-    position: relative;
+
     text-align: center;
     transition: 0.5s;
 
@@ -228,10 +228,10 @@
   }
 
   .box3 {
-    height: 30px;
     align-items: center;
     grid-column-end: 4;
     grid-column-start: 1;
+    margin-bottom: 70px;
   }
 
   .box2 {
