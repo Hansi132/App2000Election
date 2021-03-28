@@ -10,9 +10,7 @@ angular.module('myApp.home', ['ngRoute', 'ngCookies', 'ngSanitize'])
 }])
 
 .controller('homeCtrl', function ($scope, $cookies, $sce) {
-    $scope.alertBox = "<alert alert-type=\"alert-error\" text=\"Hello world this is an alert\"></alert>"
-
-    $scope.infoScreen = function () {
-        return $sce.trustAsHtml($scope.alertBox)
-    }
+     $scope.closedPopup = function () {
+         return $cookies.get("alertPopup");
+     }
 })

@@ -1,6 +1,6 @@
-<div class="grid-container" xmlns="http://www.w3.org/1999/html">
-    <div ng-controller="homeCtrl" class="box1">
-        <div ng-bind-html="infoScreen()"></div>
+<div class="grid-container" xmlns="http://www.w3.org/1999/html" ng-controller="homeCtrl">
+    <div class="box1">
+        <alert ng-if="!closedPopup()" alert-type="alert-error" text="The covid-19 restrictions are still in action at USN"></alert>
         <h1 class="title-home">Velkommen til USN skolevalg 2021</h1>
     </div>
     <div class="box2">
