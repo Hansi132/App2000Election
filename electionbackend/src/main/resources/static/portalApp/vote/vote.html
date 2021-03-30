@@ -1,0 +1,15 @@
+<div class="grid-container" ng-controller="VoteCtrl">
+    <div class="box1">
+
+        <h1 class="title-home">Her kan du stemme på den kandidaten du mener fortjener å vinne USN sitt skolevalg 2021.</h1>
+
+        <ul ng-repeat="user in users">
+            <li>{{ user.fname }}</li>
+            <li>{{ user.lname }}</li>
+            <li>{{ user.gender }}</li>
+            <li>{{ user.fDate }}</li>
+            <button ng-click="nominatePerson(user.id)">Nominer kandidtat</button>
+        </ul>
+
+    </div>
+</div>
