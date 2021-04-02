@@ -2,22 +2,22 @@
     <div class="grid-container" xmlns="http://www.w3.org/1999/html">
         <div class="box1">
             <h1>Vennligst registrer deg</h1>
+            <alert ng-if="showErrorPopup" alert-type="alert-error" text="Wrong password or email please try again."></alert>
         </div>
 
         <div class="form-box">
-
-
-
-
             <form id="login" class="input-group">
-                <input type="email" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Passord">
-                <input type="password" class="input-field" placeholder="Passord">
-                <div class="box3">
-                <input type="checkbox" class="check-box">
-                    <p class="p"> Husk passord</p>
+                <input type="email" ng-model="gui.email" class="input-field" placeholder="Email" required>
+                <input type="text" ng-model="gui.fname" class="input-field" placeholder="First name" required>
+                <input type="text" ng-model="gui.lname" class="input-field" placeholder="Last name" required>
+                <input type="text" ng-model="gui.fDate" class="input-field" placeholder="Born date WIP" required>
+                <input type="text" ng-model="gui.gender" class="input-field" placeholder="Gender" required>
+                <input type="password" ng-model="firstPassword" class="input-field" placeholder="Passord">
+                <input type="password" ng-model="secondPassword" class="input-field" ng-show="firstPassword" placeholder="Bekreft passord">
+                <div ng-if="!checkValidPassword(firstPassword, secondPassword)">
+                    <span>Passwords does not match</span>
                 </div>
-                <button type="submit" class="submit-btn">Registrer ny bruker</button>
+                <button style="margin-top: 1em;" ng-click="registerUser();" type="submit" class="submit-btn">Registrer ny bruker</button>
             </form>
 
             <div class="button-box">
@@ -27,8 +27,6 @@
                     <button type="button" class="toggle-btn">Logg Inn</button>
                 </a>
             </div>
-
-
         </div>
     </div>
 </div>
