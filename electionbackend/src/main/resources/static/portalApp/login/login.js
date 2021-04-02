@@ -10,25 +10,7 @@ angular.module('myApp.login', ['ngRoute'])
     }])
 
     .controller('loginCtrl', function loginCtrl($scope, $http){
-        $scope.userEmail = null;
-        $scope.userPassword = null;
 
-
-        function checkValidEmail(userEmail) {
-
-        }
-
-        function checkValidPassword(userPassword) {
-            return false;
-        }
-
-        $scope.login = function () {
-            if (checkValidEmail($scope.userEmail) && checkValidPassword($scope.userPassword)) {
-
-            } else {
-                return $scope.showErrorPopup = true;
-            }
-        }
 
 
     });
