@@ -42,7 +42,9 @@
 
     /*tittel på hjemsiden*/
     .title-home {
-        margin: 0;
+        font-size: 4rem;
+        margin-bottom: 20px;
+
     }
 
     /*navbar buttons hover*/
@@ -52,12 +54,13 @@
 
     /* ------------------- picture card (box2) -------------------------------*/
     .picture-card {
-        min-width: 600px;
+        min-width: 800px;
         min-height: 300px;
-        max-width: 600px;
+        max-width: 800px;
         max-height: 200px;
         border-radius: 5px;
-        box-shadow: 3px 5px 3px grey;
+
+        margin-top: 20px;
 
     }
     /*
@@ -163,7 +166,7 @@
         margin: 0;
     }
 
-    /*------------------------- HEADER ------------------------------*/
+    /*------------------------- HEADER ------------------------------
     .header {
         text-align: center;
         font-size: 2rem;
@@ -179,6 +182,8 @@
         grid-row-start: 1;
         grid-row-end: 1;
     }
+    */
+
 
     /*-------------------------GRID ------------------------------*/
     .grid-container {
@@ -191,7 +196,6 @@
         display: grid;
 
     }
-
 
     /*Overskrift*/
     .box1 {
@@ -237,11 +241,26 @@
 
 
     }
+    /*Boks på høyre side av siden*/
     .box5 {
         grid-column-start: 4;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 5;
+
+    }
+
+    /*Boks på midten av siden */
+    .box6 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        max-width: 800px;
+        min-width: 800px;
+        margin: 0 auto;
+        margin-top: 40px;
+
 
     }
     /*------------------------- Top 5 på høyre side ------------------------------*/
@@ -256,6 +275,9 @@
         float: right;
         position: fixed;
         right: 0;
+        border: 2px solid grey;
+        border-radius: 10px;
+        margin-top: 130px;
 
     }
 
@@ -334,9 +356,6 @@
     }
 
 
-
-
-
     .input-group{
         top: 180px;
         text-align: center;
@@ -384,8 +403,17 @@
     }
 
 
+    /*------------ Litt forskjellige klasser --------------------*/
+
+    /*informasjons tekst på forside*/
+    .text-field {
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        border: 2px solid grey;
 
 
+    }
 
 
 
