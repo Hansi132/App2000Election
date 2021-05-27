@@ -81,10 +81,10 @@
   }
 
   /*-----------------------Tittel på hjemsiden-------------------*/
-   .title-home {
+  .title-home {
     text-align: center;
     color: black;
-     font-size: 1rem;
+    font-size: 1.9rem;
 
   }
 
@@ -100,7 +100,12 @@
   /*-----------------------USN header-------------------*/
   .header {
     text-align: center;
+    font-size: 2rem;
 
+
+  }
+  .header-h1 {
+    margin-bottom: 0;
   }
 
   /*------------grid container --------------*/
@@ -117,9 +122,8 @@
 
   /* ------------------- picture card (box2) -------------------------------*/
   .picture-card {
-    width: 70vw;
+    width: 100%;
     border-radius: 5px;
-    box-shadow: 3px 5px 3px grey;
 
 
   }
@@ -130,7 +134,30 @@
     grid-row-start: 2;
     grid-row-end: 3;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  /*-------------------informasjons tekst på forside-------------------*/
+
+  .text-field {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid grey;
+
+  }
+  .box6 {
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    padding-left: 20px;
+    padding-right: 20px;
+
   }
 
   /*------------------------- RegisterUser ------------------------------*/
@@ -162,6 +189,7 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 8px;
   }
 
   .button-box1{
@@ -238,9 +266,13 @@
     grid-column-end: 4;
   }
 
-.p {
-  display: inline;
-}
+
+
+  .p {
+    display: inline;
+  }
+
+  /*------------ Litt forskjellige klasser --------------------*/
 
 
 

@@ -19,79 +19,72 @@
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
 
-    <div class="headerBox">
 
 
-        <header class="header">
-            <h1 class="header-h1">USN</h1>
-        </header>
+    <header class="headerTest" style="">
+        <div class="divTest" style="display: table; margin: 0 auto;">
+            <ul class="ulTest" ng-init="pressed = false;">
+                <li style="box-sizing: border-box;" class="nav-center" title="Home">
+                    <a href="#!/home">
+                        <i id="icon" class="fas fa-home"></i>
+                        <span ng-if="pressed">Home</span>
+                    </a>
+                </li>
 
-    </div>
-
-<header class="headerTest" style="">
-    <div class="divTest" style="display: table; margin: 0 auto;">
-        <ul class="ulTest" ng-init="pressed = false;">
-            <li style="box-sizing: border-box;" class="nav-center" title="Home">
-                <a href="#!/home">
-                    <i id="icon" class="fas fa-home"></i>
-                    <span ng-if="pressed">Home</span>
-                </a>
-            </li>
-
-            <li style="box-sizing: border-box;" class="nav-center">
-                <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
-                    <i id="icon1" class="fas fa-user"></i>
-                    <span ng-if="pressed">View1</span>
-                </a>
-            </li >
-            <li style="box-sizing: border-box;" class="nav-center">
-                <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
-                    <i id="icon2" class="fas fa-comments"></i>
-                    <span ng-if="pressed">view2</span>
-                </a>
-            </li>
-            <li style="box-sizing: border-box;" class="nav-center">
-                <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
-                    <i id="icon3" class="fas fa-vote-yea"></i>
-                    <span ng-if="pressed">Vote</span>
-                </a>
-            </li>
-            <li style="box-sizing: border-box;" class="nav-center">
-                <a href="#!/login" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
-                    <i id="icon4" class="fas fa-sign-in-alt"></i>
-                    <span ng-if="pressed">Log in</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div id="nav-expand-button">
-        <ul id="remove-phone" class="ulTest" style="bottom: -100px">
-            <li style="vertical-align: bottom">
-                <div ng-click="pressed = !pressed">
-                    <i id="bigger" ng-if="pressed" class="fas fa-angle-left"></i>
-                </div>
-                <div ng-click="pressed = !pressed">
-                    <i id="bigger1" ng-if="!pressed" class="fas fa-angle-right"></i>
-                </div>
-                <i ></i>
-            </li>
-        </ul>
-    </div>
-</header>
+                <li style="box-sizing: border-box;" class="nav-center">
+                    <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
+                        <i id="icon1" class="fas fa-user"></i>
+                        <span ng-if="pressed">View1</span>
+                    </a>
+                </li >
+                <li style="box-sizing: border-box;" class="nav-center">
+                    <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
+                        <i id="icon2" class="fas fa-comments"></i>
+                        <span ng-if="pressed">view2</span>
+                    </a>
+                </li>
+                <li style="box-sizing: border-box;" class="nav-center">
+                    <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+                        <i id="icon3" class="fas fa-vote-yea"></i>
+                        <span ng-if="pressed">Vote</span>
+                    </a>
+                </li>
+                <li style="box-sizing: border-box;" class="nav-center">
+                    <a href="#!/login" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+                        <i id="icon4" class="fas fa-sign-in-alt"></i>
+                        <span ng-if="pressed">Log in</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="nav-expand-button">
+            <ul id="remove-phone" class="ulTest" style="bottom: -100px">
+                <li style="vertical-align: bottom">
+                    <div ng-click="pressed = !pressed">
+                        <i id="bigger" ng-if="pressed" class="fas fa-angle-left"></i>
+                    </div>
+                    <div ng-click="pressed = !pressed">
+                        <i id="bigger1" ng-if="!pressed" class="fas fa-angle-right"></i>
+                    </div>
+                    <i ></i>
+                </li>
+            </ul>
+        </div>
+    </header>
 
 
-<div>
+    <div>
 
         <ul class="top5" id="remove-phone-1">
             <h3>Top 5 </h3>
             <li>
                 <h3 class="h3">1</h3>
-                <img class="top5bilder" src="https://scontent.fsvg2-1.fna.fbcdn.net/v/t1.0-9/14725476_1267265479961744_3867734741777960118_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=E2ESu8eDWOIAX8ilhkj&_nc_ht=scontent.fsvg2-1.fna&oh=869e7071324314c41ead9fc8067a6ae8&oe=6087295B">
+                <img class="top5bilder" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU2JRbbl3LBOm_an3eI5iplFhOoLESyBwUfmWDO49BS1EYuGUE">
             </li>
 
             <li>
                 <h3 class="h3">2</h3>
-                <img class="top5bilder" src="https://scontent.fsvg2-1.fna.fbcdn.net/v/t1.0-9/13244766_10207545490048940_9131717346649690030_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=DljyKXK1ygcAX9Xbcw2&_nc_ht=scontent.fsvg2-1.fna&oh=b84d55df1e5d01c95b03d3514fd4b594&oe=60858AF3">
+                <img class="top5bilder" src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d8acdb96de3150009a5060c%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1394%26cropX2%3D3422%26cropY1%3D380%26cropY2%3D2407">
             </li>
 
             <li>
@@ -111,7 +104,7 @@
         </ul>
 
 
-</div>
+    </div>
 
     <footer class="footer"> <p> Footer </p></footer>
 <body>
