@@ -46,6 +46,7 @@
     width: 100vw;
     left: 0;
     background-color: white;
+    margin-top: 50px;
   }
 
   i {
@@ -88,6 +89,7 @@
 
   }
 
+
   /*Overskrift*/
   .box1 {
     grid-column-start: 1;
@@ -96,7 +98,14 @@
     grid-row-end: 2;
     text-align: center;
   }
-
+  /*tittel på vote*/
+  .title-vote{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
   /*-----------------------USN header-------------------*/
   .header {
     text-align: center;
@@ -147,6 +156,7 @@
     font-size: 1rem;
     border-radius: 10px;
     border: 2px solid grey;
+    padding: 20px;
 
   }
   .box6 {
@@ -273,6 +283,39 @@
   }
 
   /*------------ Litt forskjellige klasser --------------------*/
+
+
+  /*------------VOTE site --------------------*/
+  .box7 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .vote-box{
+    list-style: none;
+    border: 2px solid grey;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 5px 5px;
+  }
+
+  .vote-btn{
+
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 25px;
+    cursor: pointer;
+    display: block;
+    margin: 100px auto 0px auto;
+    background: linear-gradient(to right, #1E90FF,#87CEFA);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 9px #E5E7E9;
+  }
 
 
 

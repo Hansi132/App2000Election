@@ -46,6 +46,11 @@
         margin-bottom: 20px;
 
     }
+    /*tittel på vote*/
+    .title-vote{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
 
     /*navbar buttons hover*/
     a.button_small:hover {
@@ -260,9 +265,15 @@
         min-width: 800px;
         margin: 0 auto;
         margin-top: 40px;
+    }
+    .box7 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
 
 
     }
+
     /*------------------------- Top 5 på høyre side ------------------------------*/
 
     .top5 {
@@ -401,6 +412,34 @@
 
 
     }
+    /*------------VOTE site --------------------*/
+
+
+    .vote-box{
+        list-style: none;
+        border: 2px solid grey;
+        border-radius: 15px;
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 5px 5px;
+    }
+
+    .vote-btn{
+        width: 210px;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 8px 25px;
+        cursor: pointer;
+        display: block;
+        margin: 100px auto 0px auto;
+        background: linear-gradient(to right, #1E90FF,#87CEFA);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+        box-shadow: 0 0 20px 9px #E5E7E9;
+    }
+
+
 
 
     /*------------ Litt forskjellige klasser --------------------*/
@@ -411,6 +450,7 @@
         font-size: 1.5rem;
         border-radius: 10px;
         border: 2px solid grey;
+        padding: 20px;
 
 
     }
