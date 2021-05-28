@@ -42,7 +42,14 @@
 
     /*tittel på hjemsiden*/
     .title-home {
-        margin: 0;
+        font-size: 4rem;
+        margin-bottom: 20px;
+
+    }
+    /*tittel på vote*/
+    .title-vote{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
 
     /*navbar buttons hover*/
@@ -52,12 +59,13 @@
 
     /* ------------------- picture card (box2) -------------------------------*/
     .picture-card {
-        min-width: 600px;
+        min-width: 800px;
         min-height: 300px;
-        max-width: 600px;
+        max-width: 800px;
         max-height: 200px;
         border-radius: 5px;
-        box-shadow: 3px 5px 3px grey;
+
+        margin-top: 20px;
 
     }
     /*
@@ -163,7 +171,7 @@
         margin: 0;
     }
 
-    /*------------------------- HEADER ------------------------------*/
+    /*------------------------- HEADER ------------------------------
     .header {
         text-align: center;
         font-size: 2rem;
@@ -179,6 +187,8 @@
         grid-row-start: 1;
         grid-row-end: 1;
     }
+    */
+
 
     /*-------------------------GRID ------------------------------*/
     .grid-container {
@@ -191,7 +201,6 @@
         display: grid;
 
     }
-
 
     /*Overskrift*/
     .box1 {
@@ -237,6 +246,7 @@
 
 
     }
+    /*Boks på høyre side av siden*/
     .box5 {
         grid-column-start: 4;
         grid-column-end: 4;
@@ -244,6 +254,26 @@
         grid-row-end: 5;
 
     }
+
+    /*Boks på midten av siden */
+    .box6 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        max-width: 800px;
+        min-width: 800px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .box7 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+
+    }
+
     /*------------------------- Top 5 på høyre side ------------------------------*/
 
     .top5 {
@@ -256,6 +286,9 @@
         float: right;
         position: fixed;
         right: 0;
+        border: 2px solid grey;
+        border-radius: 10px;
+        margin-top: 130px;
 
     }
 
@@ -334,9 +367,6 @@
     }
 
 
-
-
-
     .input-group{
         top: 180px;
         text-align: center;
@@ -374,7 +404,7 @@
     }
 
     #login{
-    left: 120px;
+        left: 120px;
     }
 
     .p {
@@ -382,10 +412,48 @@
 
 
     }
+    /*------------VOTE site --------------------*/
+
+
+    .vote-box{
+        list-style: none;
+        border: 2px solid grey;
+        border-radius: 15px;
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 5px 5px;
+    }
+
+    .vote-btn{
+        width: 210px;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 8px 25px;
+        cursor: pointer;
+        display: block;
+        margin: 100px auto 0px auto;
+        background: linear-gradient(to right, #1E90FF,#87CEFA);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+        box-shadow: 0 0 20px 9px #E5E7E9;
+    }
 
 
 
 
+    /*------------ Litt forskjellige klasser --------------------*/
+
+    /*informasjons tekst på forside*/
+    .text-field {
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        border: 2px solid grey;
+        padding: 20px;
+
+
+    }
 
 
 

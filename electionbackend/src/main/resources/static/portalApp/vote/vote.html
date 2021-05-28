@@ -1,15 +1,16 @@
 <div class="grid-container" ng-controller="VoteCtrl">
     <div class="box1">
 
-        <h1 class="title-home">Her kan du stemme på den kandidaten du mener fortjener å vinne USN sitt skolevalg 2021.</h1>
+        <h1 class="title-vote">Her kan du stemme på den kandidaten du mener fortjener å vinne USN sitt skolevalg 2021.</h1>
 
-        <ul ng-repeat="user in users">
-            <li>{{ user.fname }}</li>
-            <li>{{ user.lname }}</li>
-            <li>{{ user.gender }}</li>
-            <li>{{ user.fDate }}</li>
-            <button ng-click="nominatePerson(user.id)">Nominer kandidtat</button>
-        </ul>
-
+        <div class="box7">
+            <ul class="vote-box" ng-repeat="user in users">
+                <li>{{ user.fname }}</li>
+                <li>{{ user.lname }}</li>
+                <li>{{ user.gender }}</li>
+                <li>{{ user.fDate }}</li>
+                <button class="vote-btn" ng-click="nominatePerson(user.id)">Nominer kandidtat</button>
+            </ul>
+        </div>
     </div>
 </div>
