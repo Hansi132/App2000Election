@@ -23,53 +23,41 @@
 
     <header class="headerTest" style="">
         <div class="divTest" style="display: table; margin: 0 auto;">
-            <ul class="ulTest" ng-init="pressed = false;">
+            <ul class="ulTest" ng-init="pressed = true;">
                 <li style="box-sizing: border-box;" class="nav-center" title="Home">
                     <a href="#!/home">
                         <i id="icon" class="fas fa-home"></i>
-                        <span ng-if="pressed">Home</span>
+                        <span ng-if="pressed">Hjem</span>
                     </a>
                 </li>
 
                 <li style="box-sizing: border-box;" class="nav-center">
                     <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
                         <i id="icon1" class="fas fa-user"></i>
-                        <span ng-if="pressed">View1</span>
+                        <span ng-if="pressed">Min side</span>
                     </a>
                 </li >
                 <li style="box-sizing: border-box;" class="nav-center">
                     <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
                         <i id="icon2" class="fas fa-comments"></i>
-                        <span ng-if="pressed">view2</span>
+                        <span ng-if="pressed">Nominering</span>
                     </a>
                 </li>
                 <li style="box-sizing: border-box;" class="nav-center">
                     <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
                         <i id="icon3" class="fas fa-vote-yea"></i>
-                        <span ng-if="pressed">Vote</span>
+                        <span ng-if="pressed">Avstemning</span>
                     </a>
                 </li>
                 <li style="box-sizing: border-box;" class="nav-center">
                     <a href="#!/login" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
                         <i id="icon4" class="fas fa-sign-in-alt"></i>
-                        <span ng-if="pressed">Log in</span>
+                        <span ng-if="pressed">Logg inn</span>
                     </a>
                 </li>
             </ul>
         </div>
-        <div id="nav-expand-button">
-            <ul id="remove-phone" class="ulTest" style="bottom: -100px">
-                <li style="vertical-align: bottom">
-                    <div ng-click="pressed = !pressed">
-                        <i id="bigger" ng-if="pressed" class="fas fa-angle-left"></i>
-                    </div>
-                    <div ng-click="pressed = !pressed">
-                        <i id="bigger1" ng-if="!pressed" class="fas fa-angle-right"></i>
-                    </div>
-                    <i ></i>
-                </li>
-            </ul>
-        </div>
+
     </header>
 
 

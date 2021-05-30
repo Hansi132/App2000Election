@@ -1,5 +1,16 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="grid-container" ng-controller="VoteCtrl">
+  <div class="box1">
+
+    <h1 class="title-vote">Nominerte kandidater.</h1>
+
+    <div class="box7">
+      <ul class="vote-box" ng-repeat="user in users">
+        <li>{{ user.fname }}</li>
+        <li>{{ user.lname }}</li>
+        <li>{{ user.gender }}</li>
+        <li>{{ user.fDate }}</li>
+        <button class="vote-btn" ng-click="nominatePerson(user.id)">Nominer kandidtat</button>
+      </ul>
+    </div>
+  </div>
+</div>
