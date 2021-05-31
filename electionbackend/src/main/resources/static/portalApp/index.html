@@ -57,7 +57,19 @@
                 </li>
             </ul>
         </div>
-
+        <div id="nav-expand-button">
+            <ul id="remove-phone" class="ulTest" style="bottom: -100px">
+                <li style="vertical-align: bottom">
+                    <div ng-click="pressed = !pressed">
+                        <i id="bigger" ng-if="pressed" class="fas fa-angle-left"></i>
+                    </div>
+                    <div ng-click="pressed = !pressed">
+                        <i id="bigger1" ng-if="!pressed" class="fas fa-angle-right"></i>
+                    </div>
+                    <i ></i>
+                </li>
+            </ul>
+        </div>
     </header>
 
 
@@ -94,7 +106,7 @@
 
     </div>
 
-    <footer class="footer"> <p> Footer </p></footer>
+    <footer class="footer"> <p> App2000 skolevalg laget av Marthin Hauge, Christopher Tveråen og Hans Kristian Markeseth </p></footer>
 <body>
 <div ng-view></div>
 <!-- In production use:
