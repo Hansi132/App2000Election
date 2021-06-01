@@ -17,6 +17,7 @@ public class UserPrincipalController {
         HashMap<String, String> userInfo = new HashMap<>();
         userInfo.put("name", principal.getAttribute("name"));
         userInfo.put("email", principal.getName());
+        userInfo.put("picture", principal.getAttribute("picture"));
         return userInfo;
     }
 }
