@@ -4,7 +4,6 @@ import com.app2000.electionbackend.model.User;
 import com.app2000.electionbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.tags.Param;
 
 import java.sql.SQLException;
 import java.util.List;
