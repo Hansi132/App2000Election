@@ -48,7 +48,7 @@
     }
     /*tittel på vote*/
     .title-vote{
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-bottom: 20px;
     }
 
@@ -272,6 +272,17 @@
         gap: 10px;
 
 
+    }
+
+    .box8{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 5;
+        max-width: 800px;
+        min-width: 800px;
+        margin: 0 auto;
+        margin-top: 40px;
     }
 
     /*------------------------- Top 5 på høyre side ------------------------------*/
