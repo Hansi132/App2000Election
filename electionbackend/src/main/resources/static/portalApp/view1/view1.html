@@ -1,34 +1,18 @@
 <div ng-controller="View1Ctrl">
     <div class="grid-container">
         <div class="box1">
-             <h1>Velkommen til min side "bruker"</h1>
-
-
+             <h1>Velkommen til din side {{$root.user.name}}</h1>
         </div>
-
-
-
-    <div class="box8">
-        <form class="input-group">
-
-            <div>
-                <h3> Oppdater brukerinformasjon!</h3>
-                <img src="https://i.pinimg.com/474x/67/c3/d6/67c3d63e215e034e01d45c8256d720d3.jpg" width="80px">
-
-            </div>
-            <div><button> Last opp bilde</button></div>
-
-            <div>
-            <input type="text" class="input-text" placeholder="Skriv gjerne noe om deg selv!">
-            </div>
-
-            <button type="submit" class="submit-btn">Oppdater bruker informasjon</button>
-
-        </form>
-
-
-
-
-    </div>
+        <div class="box3">
+            <button class="vote-btn">Still til valg</button>
+            <button class="vote-btn">Trekk fra valg</button>
+            <button class="vote-btn">Start nytt valg</button>
+            <button class="vote-btn">Start kontroll av valg</button>
+        </div>
+        <div class="box4">
+            <button class="vote-btn">Last opp profilbilde</button>
+            <input class="form-box input-field" type="text" placeholder="Si noe om deg selv">
+            <button class="vote-btn">Last opp informasjon om deg</button>
+        </div>
     </div>
 </div>
