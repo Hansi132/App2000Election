@@ -1,18 +1,23 @@
 <div ng-controller="View1Ctrl">
     <div class="grid-container">
         <div class="box1">
-             <h1>Velkommen til din side {{$root.user.name}}</h1>
+             <h1 class="title-home">Velkommen til din side {{$root.user.name}}</h1>
         </div>
         <div class="box3">
-            <button class="vote-btn">Still til valg</button>
-            <button class="vote-btn">Trekk fra valg</button>
-            <button class="vote-btn">Start nytt valg</button>
-            <button class="vote-btn">Start kontroll av valg</button>
+            <button class="minside-btn">Still til valg</button>
+            <button class="minside-btn">Trekk fra valg</button>
+            <button class="minside-btn">Start nytt valg</button>
+            <button class="minside-btn">Start kontroll av valg</button>
         </div>
         <div class="box4">
-            <button class="vote-btn">Last opp profilbilde</button>
-            <input class="form-box input-field" type="text" placeholder="Si noe om deg selv">
-            <button class="vote-btn">Last opp informasjon om deg</button>
+            <div class="update-user">
+                <div class="profile-picture"> Profilbilde</div>
+                <button class="minside-btn">Last opp profilbilde</button>
+                <div class="input-text">
+                <input class="input-text" type="text" placeholder="Si noe om deg selv">
+                </div>
+                <button class="minside-btn">Last opp informasjon om deg</button>
+            </div>
         </div>
     </div>
 </div>

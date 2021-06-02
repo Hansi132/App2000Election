@@ -20,8 +20,8 @@
     <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
 
 
-
-    <header class="headerTest" style="">
+    <!-------------------------------- nav bar desktop ------------------------------------------>
+    <header id="remove-phone" class="headerTest" style="">
         <div class="divTest" style="display: table; margin: 0 auto;">
             <ul class="ulTest" ng-init="pressed = true;">
                 <li style="box-sizing: border-box;" class="nav-center" title="Home">
@@ -57,6 +57,7 @@
                 </li>
             </ul>
         </div>
+
         <div id="nav-expand-button">
             <ul id="remove-phone" class="ulTest" style="bottom: -100px">
                 <li style="vertical-align: bottom">
@@ -71,8 +72,57 @@
             </ul>
         </div>
     </header>
+<!-------------------------------- hamburger menu mobile ------------------------------------------>
+    <nav id="remove-desktop" role="navigation">
+        <div id="menuToggle">
 
+            <input type="checkbox" />
 
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+
+                <div class="hamburger-btn">
+                    <a href="#!/home">
+                        <i id="icon" class="fas fa-home"></i>
+                        <span  ng-if="pressed">Hjem</span>
+                    </a>
+                </div>
+
+                <div class="hamburger-btn">
+                    <a  href="#!/view1" >
+                        <i id="icon1" class="fas fa-user"></i>
+                        <span  ng-if="pressed">Min side</span>
+                    </a>
+                </div>
+
+                <div class="hamburger-btn">
+                    <a  href="#!/view2">
+                        <i id="icon2" class="fas fa-comments"></i>
+                        <span class="beside" ng-if="pressed">Nominering</span>
+                    </a>
+                </div>
+
+                <div class="hamburger-btn">
+                    <a  href="#!/vote" >
+                        <i id="icon3" class="fas fa-vote-yea"></i>
+                        <span ng-if="pressed">Avstemning</span>
+                    </a>
+                </div>
+
+                <div class="hamburger-btn">
+                    <a  href="/logout" >
+                        <i id="icon4" class="fas fa-sign-in-alt"></i>
+                        <span ng-if="pressed">Logg inn</span>
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-------------------------------- Top 5 kandidater desktop ------------------------------------------>
     <div>
 
         <ul class="top5" id="remove-phone-1">
@@ -106,12 +156,14 @@
 
     </div>
 
-    <footer class="footer"> <p>
-        <a href="https://www.instagram.com/usn.no/?hl=nb" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
-            <i id="icon5" class="fab fa-instagram"></i>
-        <span ng-if="pressed">Instagram</span>
-        </a>
-    </p></footer>
+    <footer class="footer">
+        <p>
+            <a href="https://www.instagram.com/usn.no/?hl=nb" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+                <i id="icon5" class="fab fa-instagram"></i>
+            <span ng-if="pressed">Instagram</span>
+            </a>
+        </p>
+    </footer>
 <body>
 <div ng-view></div>
 <!-- In production use:
