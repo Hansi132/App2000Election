@@ -259,7 +259,7 @@
     }
     /*------------------------- FOOTER ------------------------------*/
     .footer {
-        position: absolute;
+        position: fixed;
         width: 100%;
         color: black;
         text-align: center;
@@ -372,7 +372,6 @@
 
     .vote-box{
         list-style: none;
-        border: 2px solid grey;
         border-radius: 5px;
         font-size: 1.3rem;
         text-align: center;
@@ -392,6 +391,10 @@
         outline: none;
         border-radius: 30px;
         box-shadow: 0 0 20px 9px #E5E7E9;
+    }
+
+    .vote-btn:hover{
+        background: linear-gradient(to right, #87CEFA, #1E90FF);
     }
 
 
