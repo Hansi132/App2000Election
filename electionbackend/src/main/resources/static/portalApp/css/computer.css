@@ -73,7 +73,7 @@
     */
     /*------------------------- NAVBAR ------------------------------*/
     .sidepanel {
-        height: 450px; /* Specify a height */
+        height: 550px; /* Specify a height */
         width: 0; /* 0 width - change this with JavaScript */
         position: fixed; /* Stay in place */
         z-index: 1; /* Stay on top */
@@ -87,7 +87,7 @@
 
     /* The sidepanel links */
     .sidepanel a {
-        padding: 8px 8px 8px 32px;
+        padding: 28px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
         color: #818181;
@@ -111,6 +111,10 @@
 
     /* Style the button that is used to open the sidepanel */
     .openbtn {
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
         font-size: 30px;
         cursor: pointer;
         background-color: white;
