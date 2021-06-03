@@ -18,110 +18,74 @@
     <link rel="stylesheet" href="css/alerts.css">
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://kit.fontawesome.com/80cb70815a.js" crossorigin="anonymous"></script>
+    <script src="navbar.js"></script>
+    <script src="navbarDesktop.js"></script>
 
 
     <!-------------------------------- nav bar desktop ------------------------------------------>
-    <header id="remove-phone" class="headerTest" style="">
-        <div class="divTest" style="display: table; margin: 0 auto;">
-            <ul class="ulTest" ng-init="pressed = true;">
-                <li style="box-sizing: border-box;" class="nav-center" title="Home">
-                    <a href="#!/home">
-                        <i id="icon" class="fas fa-home"></i>
-                        <span ng-if="pressed">Hjem</span>
-                    </a>
-                </li>
+    <div id="remove-phone">
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#!/home">
+            <i  class="fas fa-home"></i>
+            <span >Hjem</span>
+        </a>
+        <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
+            <i  class="fas fa-user"></i>
+            <span >Min side</span>
+        </a>
+        <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
+            <i  class="fas fa-comments"></i>
+            <span >Nominering</span>
+        </a>
+        <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+            <i  class="fas fa-vote-yea"></i>
+            <span >Avstemning</span>
+        </a>
+        <a href="/logout" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+            <i  class="fas fa-sign-in-alt"></i>
+            <span >Logg inn/ut</span>
+        </a>
 
-                <li style="box-sizing: border-box;" class="nav-center">
-                    <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
-                        <i id="icon1" class="fas fa-user"></i>
-                        <span ng-if="pressed">Min side</span>
-                    </a>
-                </li >
-                <li style="box-sizing: border-box;" class="nav-center">
-                    <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
-                        <i id="icon2" class="fas fa-comments"></i>
-                        <span ng-if="pressed">Nominering</span>
-                    </a>
-                </li>
-                <li style="box-sizing: border-box;" class="nav-center">
-                    <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
-                        <i id="icon3" class="fas fa-vote-yea"></i>
-                        <span ng-if="pressed">Avstemning</span>
-                    </a>
-                </li>
-                <li style="box-sizing: border-box;" class="nav-center">
-                    <a href="/logout" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
-                        <i id="icon4" class="fas fa-sign-in-alt"></i>
-                        <span ng-if="pressed">Logg inn</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div id="nav-expand-button">
-            <ul id="remove-phone" class="ulTest" style="bottom: -100px">
-                <li style="vertical-align: bottom">
-                    <div ng-click="pressed = !pressed">
-                        <i id="bigger" ng-if="pressed" class="fas fa-angle-left"></i>
-                    </div>
-                    <div ng-click="pressed = !pressed">
-                        <i id="bigger1" ng-if="!pressed" class="fas fa-angle-right"></i>
-                    </div>
-                    <i ></i>
-                </li>
-            </ul>
-        </div>
-    </header>
+    </div>
+    <button class="openbtn" onclick="openNav()">&#9776; USN</button>
+    </div>
 <!-------------------------------- hamburger menu mobile ------------------------------------------>
-    <nav id="remove-desktop" role="navigation">
-        <div id="menuToggle">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-            <input type="checkbox" />
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-            <ul id="menu">
-
-                <div class="hamburger-btn">
-                    <a href="#!/home">
-                        <i id="icon" class="fas fa-home"></i>
-                        <span  ng-if="pressed">Hjem</span>
-                    </a>
-                </div>
-
-                <div class="hamburger-btn">
-                    <a  href="#!/view1" >
-                        <i id="icon1" class="fas fa-user"></i>
-                        <span  ng-if="pressed">Min side</span>
-                    </a>
-                </div>
-
-                <div class="hamburger-btn">
-                    <a  href="#!/view2">
-                        <i id="icon2" class="fas fa-comments"></i>
-                        <span class="beside" ng-if="pressed">Nominering</span>
-                    </a>
-                </div>
-
-                <div class="hamburger-btn">
-                    <a  href="#!/vote" >
-                        <i id="icon3" class="fas fa-vote-yea"></i>
-                        <span ng-if="pressed">Avstemning</span>
-                    </a>
-                </div>
-
-                <div class="hamburger-btn">
-                    <a  href="/logout" >
-                        <i id="icon4" class="fas fa-sign-in-alt"></i>
-                        <span ng-if="pressed">Logg inn</span>
-                    </a>
-                </div>
-            </ul>
+    <!-- Top Navigation Menu -->
+    <div id="remove-desktop" class="topnav">
+        <a href="#home" class="active">USN</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#!/home">
+                <i id="icon" class="fas fa-home"></i>
+                <span >Hjem</span>
+            </a>
+            <a href="#!/view1" style="margin-top: 4px; margin-bottom: 4px;">
+                <i id="icon1" class="fas fa-user"></i>
+                <span >Min side</span>
+            </a>
+            <a href="#!/view2" style="margin-top: 4px; margin-bottom: 4px;">
+                <i id="icon2" class="fas fa-comments"></i>
+                <span >Nominering</span>
+            </a>
+            <a href="#!/vote" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+                <i id="icon3" class="fas fa-vote-yea"></i>
+                <span >Avstemning</span>
+            </a>
+            <a href="/logout" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
+                <i id="icon4" class="fas fa-sign-in-alt"></i>
+                <span >Logg inn</span>
+            </a>
         </div>
-    </nav>
 
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+    </div>
     <!-------------------------------- Top 5 kandidater desktop ------------------------------------------>
     <div>
 
@@ -155,15 +119,14 @@
 
 
     </div>
-
     <footer class="footer">
-        <p>
+
             <a href="https://www.instagram.com/usn.no/?hl=nb" style="margin-top: 4px; margin-bottom: 4px; text-decoration: none;">
                 <i id="icon5" class="fab fa-instagram"></i>
-            <span ng-if="pressed">Instagram</span>
+                <h3 class="icon-text">Instagram</h3>
             </a>
-        </p>
     </footer>
+
 <body>
 <div ng-view></div>
 <!-- In production use:
@@ -185,4 +148,5 @@
 <script src="core/version/version-directive.js"></script>
 <script src="core/version/interpolate-filter.js"></script>
 </body>
+
 </html>

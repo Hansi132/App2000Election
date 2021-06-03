@@ -37,151 +37,45 @@
   #remove-phone {
     display: none;
   }
-  .beside{
-    display: inline-block;
-    min-width: 100px;
-  }
-
-  .hamburger-btn{
-    min-width: 100%;
-    border: 10px;
-    margin: 10px;
-    display: inline-block;
-
-  }
-  #icon {
-    font-size: 2rem;
-  }
-
-  #icon1 {
-    font-size: 2rem;
-  }
-
-  #icon2 {
-    font-size: 2rem;
-  }
-
-  #icon3 {
-    font-size: 2rem;
-  }
-
-  #icon4 {
-    font-size: 2rem;
-  }
-
-  #menuToggle
-  {
-    display: block;
+  .topnav {
+    overflow: hidden;
+    background: linear-gradient(to right, #1E90FF,#87CEFA);
     position: relative;
-    top: 20px;
-    left: 30px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-    color: #87CEFA;
   }
 
-  #menuToggle a
-  {
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
     text-decoration: none;
-
-    transition: color 0.3s ease;
-  }
-
-
-  #menuToggle input
-  {
+    font-size: 17px;
     display: block;
-    width: 40px;
-    height: 32px;
+  }
+
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: linear-gradient(to right, #87CEFA,#1E90FF);
+    display: block;
     position: absolute;
-
-    cursor: pointer;
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-    -webkit-touch-callout: none;
+    right: 0;
+    top: 0;
   }
 
-
-  #menuToggle span
-  {
-    display: inherit;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: linear-gradient(to right,#1E90FF,#87CEFA);
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    opacity 0.55s ease;
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #87CEFA;
+    color: black;
   }
 
-  #menuToggle span:first-child
-  {
-    transform-origin: 0% 0%;
-  }
-
-  #menuToggle span:nth-last-child(2)
-  {
-    transform-origin: 0% 100%;
-  }
-
-  #menuToggle input:checked ~ span
-  {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-  }
-
-
-  #menuToggle input:checked ~ span:nth-last-child(3)
-  {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-
-
-  #menuToggle input:checked ~ span:nth-last-child(2)
-  {
-    transform: rotate(-45deg) translate(0, -1px);
-  }
-
-
-  #menu
-  {
-    position: absolute;
-    opacity: 0.98;
-    width: 100%;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    border-radius: 5px;
-    background: linear-gradient(to right,#1E90FF,#87CEFA);
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
-
-  #menu li
-  {
-    padding: 10px 0;
-    font-size: 22px;
-  }
-
-  /*
-   * And let's slide it in from the left
-   */
-  #menuToggle input:checked ~ ul
-  {
-    transform: none;
+  /* Style the active link (or home/logo) */
+  .active {
+    background: linear-gradient(to right, #1E90FF,#87CEFA);
+    color: white;
   }
 
   /*-----------------------Tittel på hjemsiden-------------------*/
@@ -226,6 +120,8 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
+    width: 100vw;
+    height: 100vh;
 
 
   }
@@ -267,8 +163,8 @@
   }
   .box6 {
     align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 5;
     border: 10px;
@@ -373,8 +269,8 @@
 
   .box3 {
     align-items: center;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
     margin-bottom: 70px;

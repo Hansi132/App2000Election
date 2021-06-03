@@ -73,128 +73,63 @@
             background-image: url(https://media.istockphoto.com/photos/mobile-phone-top-view-with-white-screen-picture-id1161116588?b=1&k=6&m=1161116588&s=170667a&w=0&h=sMbhMUwE4Ocu25-rV1D2J5Yjh0qz2CO6fciPNO-OBEA=);
     */
     /*------------------------- NAVBAR ------------------------------*/
-    .headerTest {
-        box-sizing: border-box;
-        position: fixed;
+    .sidepanel {
+        height: 450px; /* Specify a height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
         top: 0;
         left: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        width: 100px;
-        z-index: 100;
-        border-right: 2px solid whitesmoke;
-
+        background-color: white; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
     }
 
-    .divTest {
-        box-sizing: border-box;
-        flex: 1 0 auto;
-    }
-
-    .ulTest {
-        list-style: none;
-        padding: 0px;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-
-    }
-
-    .nav-center {
-        padding-bottom: 10px;
-
-    }
-
-    #icon {
-        font-size: 2rem;
-    }
-
-    #icon1 {
-        font-size: 2rem;
-    }
-
-    #icon2 {
-        font-size: 2rem;
-    }
-
-    #icon3 {
-        font-size: 2rem;
-    }
-
-    #icon4 {
-        font-size: 2rem;
-    }
-
-    #nav-expand-button {
-        background-color: whitesmoke;
-        color: black;
-    }
-
-    #bigger {
-        padding: 15px;
-        font-size: 1.5rem;
-    }
-
-    #bigger1 {
-        padding: 15px;
-        font-size: 1.5rem;
-    }
-
-    a {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
+    /* The sidepanel links */
+    .sidepanel a {
+        padding: 8px 8px 8px 32px;
         text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
     }
 
-    a:visited {
-        color: black;
+    /* When you mouse over the navigation links, change their color */
+    .sidepanel a:hover {
+        color: #f1f1f1;
     }
 
-    .span {
-        margin-top: 15px;
-        margin-left: 5px;
-        border-radius: 5px;
-        max-height: 50px;
-        min-height: 50px;
-        font-weight: bold;
-        color: black;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 14px;
-        min-width: 54px;
+    /* Position and style the close button (top right corner) */
+    .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
     }
 
-    #remove-phone {
-        margin: 0;
+    /* Style the button that is used to open the sidepanel */
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: white;
+        color: #818181;
+        padding: 15px 100px 15px 20px;
+        border: none;
     }
 
-    /*------------------------- HEADER ------------------------------
-    .header {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 0;
+    .openbtn:hover {
+        color: #87CEFA;
     }
-    .header-h1 {
-        margin-bottom: 0;
-    }
-
-    .headerBox {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 1;
-    }
-    */
 
 
     /*-------------------------GRID ------------------------------*/
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr  !important;
-        grid-template-rows: 100px 1fr 1fr 100px !important;
+        grid-template-rows: 100px 1fr 1fr 100px auto !important;
     }
 
     .grid-container1 {
@@ -229,11 +164,13 @@
     }
     /*Boks på høyre side av siden*/
     .box3 {
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
         grid-row-end: 4;
         padding-top: 30px;
+        margin: 50px auto;
+
 
 
     }
@@ -241,15 +178,15 @@
     .box4 {
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
 
 
     }
     /*Boks på høyre side av siden*/
     .box5 {
-        grid-column-start: 4;
-        grid-column-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 5;
 
@@ -314,16 +251,16 @@
     }
     /*------------------------- FOOTER ------------------------------*/
     .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        position: absolute;
         width: 100%;
-        border: 2px solid whitesmoke;
         color: black;
         text-align: center;
         margin-top: 30px;
+        bottom: 0;
+        left: 0;
 
     }
+
     /*------------------------- RegisterUser ------------------------------*/
 
     .form-box{
@@ -372,7 +309,7 @@
         width: 250px;
         height: 70px;
         text-align: center;
-        margin: 30px auto 0px auto;
+        margin: 30px auto 30px auto;
     }
 
 
@@ -462,8 +399,9 @@
 
     }
     .update-user{
-        border: 2px solid grey;
+
         border-radius: 5px;
+        margin-top: 20px;
     }
 
     .profile-picture{
@@ -473,6 +411,7 @@
         width: 75px;
         height: 75px;
         margin: 30px auto 0px auto;
+        display: inline-block;
     }
 
     .minside-btn{
@@ -480,20 +419,47 @@
         padding: 10px 30px;
         cursor: pointer;
         display: block;
-        margin: 30px auto 0px auto;
+        margin:0;
         border: 0;
         outline: none;
         border-radius: 5px;
         background: linear-gradient(to right, #1E90FF,#87CEFA);
-
-
+    }
+    .minside-btn1{
+        width: 180px;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px 10px ;
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+        background: linear-gradient(to right, #1E90FF,#87CEFA);
     }
     .minside-btn:hover{
+        background: linear-gradient(to right, #87CEFA,#1E90FF);
+    }
+    .minside-btn1:hover{
         background: linear-gradient(to right, #87CEFA,#1E90FF);
     }
 
     #remove-desktop{
         display: none;
+    }
+
+    .push{
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 50px;
+    }
+    #icon5{
+        font-size: 2rem;
+    }
+    .icon-text{
+        display: inline-block;
+        margin: auto;
     }
 
 
