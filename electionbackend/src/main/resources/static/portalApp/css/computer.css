@@ -157,43 +157,15 @@
         grid-row-end: 3;
         margin: 0 auto;
     }
-    /*RegisterUser*/
-    .form-box{
-        grid-column-start: 2;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        margin: 0 auto;
-    }
-    /*Boks på høyre side av siden*/
-    .box3 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        padding-top: 30px;
-        margin: 50px auto;
 
-
-
-    }
     /*Boks på venstre side av siden*/
     .box4 {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 4;
         grid-row-end: 6;
-
-
     }
-    /*Boks på høyre side av siden*/
-    .box5 {
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 5;
 
-    }
 
     /*Boks på midten av siden */
     .box6 {
@@ -207,16 +179,6 @@
     }
 
 
-    .box8{
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 5;
-        max-width: 800px;
-        min-width: 800px;
-        margin: 0 auto;
-        margin-top: 40px;
-    }
     .box7{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -344,19 +306,6 @@
         outline: none;
     }
 
-    .submit-btn{
-        width: 180px;
-        padding: 10px 30px;
-        cursor: pointer;
-        display: block;
-        margin: auto;
-        background: linear-gradient(to right, #1E90FF,#87CEFA);
-        border: 0;
-        outline: none;
-        border-radius: 5px;
-        box-shadow: 0 0 20px 9px #E5E7E9;
-    }
-
     .check-box{
         display: inline-block;
         margin-right: 10px;
@@ -435,9 +384,7 @@
         background: linear-gradient(to right, #1E90FF,#87CEFA);
     }
 
-    .minside-btn:hover{
-        background: linear-gradient(to right, #87CEFA,#1E90FF);
-    }
+
     .minside-btn1:hover{
         background: linear-gradient(to right, #87CEFA,#1E90FF);
     }
@@ -446,13 +393,6 @@
         display: none;
     }
 
-    .push{
-        grid-row-start: 5;
-        grid-row-end: 6;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        height: 50px;
-    }
     #icon5{
         font-size: 2rem;
     }
