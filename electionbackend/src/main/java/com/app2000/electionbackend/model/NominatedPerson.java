@@ -8,24 +8,17 @@ public class NominatedPerson {
     private final String Institute;
     private final String Information;
     private final int Votes;
-    private final int PictureId;
 
     public NominatedPerson(@JsonProperty("userId") int userId,
                            @JsonProperty("faculty") String faculty,
                            @JsonProperty("institute") String institute,
                            @JsonProperty("information") String information,
-                           @JsonProperty("votes") int votes,
-                           @JsonProperty("pictureId") int pictureId) {
+                           @JsonProperty("votes") int votes) {
         UserId = userId;
         Faculty = faculty;
         Institute = institute;
         Information = information;
         Votes = votes;
-        PictureId = pictureId;
-    }
-
-    public int getPictureId() {
-        return PictureId;
     }
 
     public int getVotes() {

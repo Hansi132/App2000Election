@@ -36,4 +36,21 @@ public class ProfilePictureDataAccess implements ProfilePictureDB{
         }
         return list;
     }
+
+    @Override
+    public int insertProfilePicture(ProfilePicture profilePicture) throws SQLException {
+        int max = 0;
+        String sql = "INSERT INTO ProfilePicture(Path) VALUES (?);";
+        PreparedStatement insertStmt = connection.prepareStatement(sql);
+        insertStmt.setString(1, profilePicture.getPath());
+        insertStmt.execute();
+
+        sql = "SELECT MAX(PictureId) as 'max' FROM ProfilePicture;";
+        PreparedStatement selectStmt = connection.prepareStatement(sql);
+        ResultSet rs = selectStmt.executeQuery();
+        if (rs.next()) {
+            max = rs.getInt("max");
+        }
+        return max;
+    }
 }

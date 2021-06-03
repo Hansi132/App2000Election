@@ -2,31 +2,24 @@ package com.app2000.electionbackend.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.UUID;
-
 public class User {
     private final int id;
     private final String email;
-    private final String fName;
-    private final String lName;
-    private String password;
-    private final String fDate;
-    private final String gender;
-
-    public User(int id,
+    private final int userTypeId;
+    private final String name;
+    private int pictureId;
+    private boolean hasVoted;
+    public User(Integer id,
                 @JsonProperty("email") String email,
-                @JsonProperty("fname") String fName,
-                @JsonProperty("lname") String lName,
-                @JsonProperty("password") String password,
-                @JsonProperty("fDate") String fDate,
-                @JsonProperty("gender") String gender) {
+                @JsonProperty("userTypeID") int userTypeId,
+                @JsonProperty("name") String name,
+                @JsonProperty("pictureId") int pictureId, @JsonProperty("hasVoted") boolean hasVoted) {
         this.id = id;
         this.email = email;
-        this.fName = fName;
-        this.lName = lName;
-        this.password = password;
-        this.fDate = fDate;
-        this.gender = gender;
+        this.userTypeId = userTypeId;
+        this.name = name;
+        this.pictureId = pictureId;
+        this.hasVoted = hasVoted;
     }
 
     public int getId() {
@@ -37,27 +30,27 @@ public class User {
         return email;
     }
 
-    public String getfName() {
-        return fName;
+    public int getUserTypeId() {
+        return userTypeId;
     }
 
-    public String getlName() {
-        return lName;
+    public String getName() {
+        return name;
     }
 
-    public String getPassword() {
-        return password;
+    public int getPictureId() {
+        return pictureId;
     }
 
-    public String getfDate() {
-        return fDate;
+    public void setPictureId(int pictureId) {
+        this.pictureId = pictureId;
     }
 
-    public String getGender() {
-        return gender;
+    public boolean isHasVoted() {
+        return hasVoted;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    };
+    public void setHasVoted(boolean hasVoted) {
+        this.hasVoted = hasVoted;
+    }
 }

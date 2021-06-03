@@ -30,8 +30,8 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/id")
-    public User selectOneUser(@RequestParam int id) throws SQLException {
-        return userService.selectOneUser(id);
+    @GetMapping("/email")
+    public User selectOneUser(@RequestParam String email) throws SQLException {
+        return userService.selectOneUser(email);
     }
 }

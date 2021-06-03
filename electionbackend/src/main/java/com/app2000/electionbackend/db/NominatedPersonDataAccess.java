@@ -25,6 +25,19 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
     }
 
     @Override
+    public boolean addVote(NominatedPerson nominatedPerson) throws SQLException {
+        String updateSql = "UPDATE NominatedPerson SET Votes = Votes + 1 WHERE UserId = ?;";
+        PreparedStatement updateStmt = connection.prepareStatement(updateSql);
+        updateStmt.setInt(1, nominatedPerson.getUserId());
+        try {
+            updateStmt.execute();
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    @Override
     public int insertNominatedPerson(NominatedPerson nominatedPerson) throws SQLException {
         String insertSql = "INSERT INTO NominatedPerson VALUES (?,?,?,?,?,?);";
         PreparedStatement insertStmt = connection.prepareStatement(insertSql);
@@ -33,7 +46,6 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
         insertStmt.setString(3, nominatedPerson.getInstitute());
         insertStmt.setString(4, nominatedPerson.getInformation());
         insertStmt.setInt(5, nominatedPerson.getVotes());
-        insertStmt.setInt(6, nominatedPerson.getPictureId());
         insertStmt.execute();
         return 1;
     }
@@ -50,8 +62,7 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
                     resultSet.getString("Faculty"),
                     resultSet.getString("Institute"),
                     resultSet.getString("Information"),
-                    resultSet.getInt("Votes"),
-                    resultSet.getInt("PictureId"));
+                    resultSet.getInt("Votes"));
             nominatedPersonList.add(nominatedPerson);
         }
         return nominatedPersonList;

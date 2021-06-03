@@ -25,4 +25,8 @@ public class NominatedPersonService {
     public List<NominatedPerson> getAllNominatedPersons() throws SQLException {
         return nominatedPersonDB.getAllNominatedPerson();
     }
+
+    public boolean addVote(NominatedPerson nominatedPerson) throws SQLException {
+        return nominatedPersonDB.addVote(nominatedPerson);
+    }
 }

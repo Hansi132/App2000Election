@@ -27,7 +27,11 @@ public class UserService {
         return userDB.selectAllUsers();
     }
 
-    public User selectOneUser(int id) throws SQLException {
-        return userDB.selectOneUser(id);
+    public User selectOneUser(String email) throws SQLException {
+        return userDB.selectOneUser(email);
+    }
+
+    public int updateVote(String email, User user) throws SQLException {
+        return userDB.updateVote(email, user);
     }
 }

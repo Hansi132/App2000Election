@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class RedirectController {
 
     @GetMapping()
-    public RedirectView RedirectHome(
+    public RedirectView redirectHome(
             RedirectAttributes attributes) {
         return new RedirectView("/portalApp/index.html");
     }

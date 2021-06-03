@@ -1,6 +1,5 @@
 package com.app2000.electionbackend.db;
 
-import com.app2000.electionbackend.exception.UserNotFoundException;
 import com.app2000.electionbackend.model.User;
 import com.app2000.electionbackend.util.DatabaseConnection;
 import org.springframework.stereotype.Repository;
@@ -27,14 +26,13 @@ public class UserDataAccess implements UserDB {
 
     @Override
     public int insertUser(User user) throws SQLException {
-        String insertSql = "INSERT INTO User(Email, FName, LName, FDate, Password, Gender) VALUES (?,?,?,?,?,?);";
+        String insertSql = "INSERT INTO User(Email, UserTypeId, Name, PictureId) VALUES (?,?,?,?,?);";
         PreparedStatement insertStmt = connection.prepareStatement(insertSql);
         insertStmt.setString(1, user.getEmail());
-        insertStmt.setString(2, user.getfName());
-        insertStmt.setString(3, user.getlName());
-        insertStmt.setString(4, user.getfDate());
-        insertStmt.setString(5, user.getPassword());
-        insertStmt.setString(6, user.getGender());
+        insertStmt.setInt(2, user.getUserTypeId());
+        insertStmt.setString(3, user.getName());
+        insertStmt.setInt(4, user.getPictureId());
+        insertStmt.setBoolean(5, user.isHasVoted());
         insertStmt.execute();
         System.out.print("We got here");
         return 1;
@@ -48,35 +46,37 @@ public class UserDataAccess implements UserDB {
         ResultSet resultSet = selectStmt.executeQuery();
         while (resultSet.next()) {
             User user = new User(
-                    resultSet.getInt("UserId"),
-                    resultSet.getString("Email"),
-                    resultSet.getString("FName"),
-                    resultSet.getString("LName"),
-                    "",
-                    resultSet.getString("FDate"),
-                    resultSet.getString("Gender"));
+                    resultSet.getInt("UserId"), resultSet.getString("Email"),
+                    resultSet.getInt("UserTypeId"), resultSet.getString("Name"),
+                    resultSet.getInt("PictureId"), resultSet.getBoolean("hasVoted"));
             userList.add(user);
         }
         return userList;
     }
 
     @Override
-    public User selectOneUser(int id) throws SQLException {
-        String selectSql = "SELECT * FROM User WHERE UserId = ?;";
+    public User selectOneUser(String email) throws SQLException {
+        String selectSql = "SELECT * FROM User WHERE Email = ?;";
         PreparedStatement selectStmt = connection.prepareStatement(selectSql);
-        selectStmt.setInt(1, id);
+        selectStmt.setString(1, email);
         ResultSet resultSet = selectStmt.executeQuery();
         if (resultSet.next()) {
             return new User(
-                    resultSet.getInt("UserId"),
-                    resultSet.getString("Email"),
-                    resultSet.getString("FName"),
-                    resultSet.getString("LName"),
-                    "",
-                    resultSet.getString("FDate"),
-                    resultSet.getString("Gender"));
+                    resultSet.getInt("UserId"), resultSet.getString("Email"),
+                    resultSet.getInt("UserTypeId"), resultSet.getString("Name"),
+                    resultSet.getInt("PictureId"), resultSet.getBoolean("hasVoted"));
         } else {
-            throw new UserNotFoundException("No user is found with that id");
+            return null;
         }
+    }
+
+    @Override
+    public int updateVote(String email, User user) throws SQLException {
+        String updateSql = "UPDATE User SET hasVoted = ? WHERE Email = ?";
+        PreparedStatement updateStmt = connection.prepareStatement(updateSql);
+        updateStmt.setBoolean(1, user.isHasVoted());
+        updateStmt.setString(2, email);
+        updateStmt.execute();
+        return 1;
     }
 }

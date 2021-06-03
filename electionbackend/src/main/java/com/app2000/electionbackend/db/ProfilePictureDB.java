@@ -9,4 +9,6 @@ public interface ProfilePictureDB {
 
     List<ProfilePicture> getAllProfilePictures() throws SQLException;
 
+    int insertProfilePicture(ProfilePicture profilePicture) throws SQLException;
+
 }

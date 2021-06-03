@@ -21,4 +21,8 @@ public class ProfilePictureService {
     public List<ProfilePicture> getAllProfilePictures() throws SQLException {
         return profilePictureDB.getAllProfilePictures();
     }
+
+    public int insertProfilePicture(ProfilePicture profilePicture) throws SQLException {
+        return profilePictureDB.insertProfilePicture(profilePicture);
+    }
 }

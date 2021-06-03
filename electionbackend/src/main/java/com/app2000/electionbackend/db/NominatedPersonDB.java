@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface NominatedPersonDB {
 
+    boolean addVote(NominatedPerson nominatedPerson) throws SQLException;
+
     int insertNominatedPerson(NominatedPerson nominatedPerson) throws SQLException;
 
     List<NominatedPerson> getAllNominatedPerson() throws SQLException;

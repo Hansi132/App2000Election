@@ -4,7 +4,6 @@ import com.app2000.electionbackend.model.User;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.UUID;
 
 public interface UserDB {
 
@@ -12,5 +11,7 @@ public interface UserDB {
 
     List<User> selectAllUsers() throws SQLException;
 
-    User selectOneUser(int id) throws SQLException;
+    User selectOneUser(String email) throws SQLException;
+
+    int updateVote(String email, User user) throws SQLException;
 }

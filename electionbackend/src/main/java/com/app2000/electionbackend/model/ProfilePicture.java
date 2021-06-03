@@ -6,7 +6,7 @@ public class ProfilePicture {
     private final int PictureId;
     private final String Path;
 
-    public ProfilePicture(@JsonProperty int pictureId, @JsonProperty String path) {
+    public ProfilePicture(@JsonProperty Integer pictureId, @JsonProperty String path) {
         PictureId = pictureId;
         Path = path;
     }
