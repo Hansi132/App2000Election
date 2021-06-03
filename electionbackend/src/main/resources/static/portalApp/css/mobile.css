@@ -37,6 +37,11 @@
   #remove-phone {
     display: none;
   }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
   .topnav {
     overflow: hidden;
     background: linear-gradient(to right, #1E90FF,#87CEFA);
