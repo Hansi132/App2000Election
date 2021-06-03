@@ -373,7 +373,10 @@
     }
     /*------------VOTE site --------------------*/
 
-
+    .img-center{
+        margin: 0 auto;
+    }
+    
     .vote-box{
         list-style: none;
         border-radius: 5px;
