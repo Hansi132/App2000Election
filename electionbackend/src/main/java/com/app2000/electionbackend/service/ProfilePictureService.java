@@ -25,4 +25,8 @@ public class ProfilePictureService {
     public int insertProfilePicture(ProfilePicture profilePicture) throws SQLException {
         return profilePictureDB.insertProfilePicture(profilePicture);
     }
+
+    public String getUserProfilePicture(int pictureId) throws SQLException {
+        return profilePictureDB.getUserProfilePicture(pictureId);
+    }
 }
