@@ -3,10 +3,7 @@ package com.app2000.electionbackend.api;
 import com.app2000.electionbackend.model.ProfilePicture;
 import com.app2000.electionbackend.service.ProfilePictureService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -25,5 +22,10 @@ public class ProfilePictureController {
     @GetMapping
     public List<ProfilePicture> getAllProfilePictures() throws SQLException {
         return profilePictureService.getAllProfilePictures();
+    }
+
+    @GetMapping("/picture")
+    public String getUserProfilePicture(@RequestParam int pictureId) throws SQLException {
+        return profilePictureService.getUserProfilePicture(pictureId);
     }
 }

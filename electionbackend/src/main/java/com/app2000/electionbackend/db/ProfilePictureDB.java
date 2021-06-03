@@ -11,4 +11,5 @@ public interface ProfilePictureDB {
 
     int insertProfilePicture(ProfilePicture profilePicture) throws SQLException;
 
+    String getUserProfilePicture(int pictureId) throws SQLException;
 }

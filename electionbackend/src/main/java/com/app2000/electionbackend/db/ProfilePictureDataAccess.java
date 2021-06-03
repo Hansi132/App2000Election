@@ -53,4 +53,13 @@ public class ProfilePictureDataAccess implements ProfilePictureDB{
         }
         return max;
     }
+
+    @Override
+    public String getUserProfilePicture(int pictureId) throws SQLException {
+        String selectSql = "SELECT Path FROM ProfilePicture WHERE PictureId = ?";
+        PreparedStatement selectStmt = connection.prepareStatement(selectSql);
+        selectStmt.setInt(1, pictureId);
+        ResultSet rs = selectStmt.executeQuery();
+        return rs.getString(1);
+    }
 }
