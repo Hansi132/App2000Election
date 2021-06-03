@@ -26,7 +26,7 @@ public class UserDataAccess implements UserDB {
 
     @Override
     public int insertUser(User user) throws SQLException {
-        String insertSql = "INSERT INTO User(Email, UserTypeId, Name, PictureId) VALUES (?,?,?,?,?);";
+        String insertSql = "INSERT INTO User(Email, UserTypeId, Name, PictureId, hasVoted) VALUES (?,?,?,?,?);";
         PreparedStatement insertStmt = connection.prepareStatement(insertSql);
         insertStmt.setString(1, user.getEmail());
         insertStmt.setInt(2, user.getUserTypeId());
