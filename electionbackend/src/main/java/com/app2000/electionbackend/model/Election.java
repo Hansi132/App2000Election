@@ -5,17 +5,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.sql.Date;
 
 public class Election {
-    private int electionId;
+    private Integer electionId;
     private Date electionStart;
     private Date electionEnd;
     private Boolean controlled;
     private Integer electedUserId;
 
-    public Election(int electionId) {
+    public Election(Integer electionId) {
         this.electionId = electionId;
     }
 
-    public Election(@JsonProperty("electionId") int electionId,
+    public Election(@JsonProperty("electionId") Integer electionId,
                     @JsonProperty("electionId") Date electionStart,
                     @JsonProperty("electionId") Date electionEnd,
                     @JsonProperty("electionId") Boolean controlled,
@@ -31,7 +31,7 @@ public class Election {
         return electionId;
     }
 
-    public void setElectionId(int electionId) {
+    public void setElectionId(Integer electionId) {
         this.electionId = electionId;
     }
 
