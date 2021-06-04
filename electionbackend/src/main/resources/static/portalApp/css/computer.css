@@ -132,7 +132,7 @@
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr  !important;
-        grid-template-rows: 200px 1fr 1fr 1fr 100px auto !important;
+        grid-template-rows: 1fr 1fr 1fr 1fr 100px auto !important;
     }
 
     .grid-container1 {
