@@ -382,11 +382,13 @@
 
     .minside-btn1{
         width: 180px;
+        max-height: 50px;
         padding: 10px 30px;
         cursor: pointer;
         display: inline-block;
         margin: 10px 10px ;
         border: 0;
+        font-weight: bold;
         outline: none;
         border-radius: 5px;
         background: linear-gradient(to right, #1E90FF,#87CEFA);
