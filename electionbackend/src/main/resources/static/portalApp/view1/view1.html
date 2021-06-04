@@ -8,19 +8,13 @@
         <div class="box7">
 
         <div class="box9">
-            <button class="minside-btn1">Still til valg</button>
-            <button class="minside-btn1">Trekk fra valg</button>
-            <button class="minside-btn1">Start nytt valg</button>
-            <button class="minside-btn1">Start kontroll av valg</button>
+            <button class="minside-btn1" ng-click="withdrawFromElection($root.user.id)">Trekk fra valg</button>
+            <button class="minside-btn1" ng-if="$root.user.userTypeId == 3">Start nytt valg</button>
+            <button class="minside-btn1" ng-if="$root.user.userTypeId == 2">Start kontroll av valg</button>
         </div>
 
         <div class="box9">
             <img class="img-center" ng-src="{{$root.user.picture}}" alt="Profile Picture">
-
-            <div>
-            <input class="input-text" type="text" placeholder="Si noe om deg selv">
-            <button class="minside-btn1">Last opp informasjon om deg</button>
-            </div>
         </div>
         </div>
 

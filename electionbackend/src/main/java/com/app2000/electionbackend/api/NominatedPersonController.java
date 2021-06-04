@@ -29,4 +29,14 @@ public class NominatedPersonController {
     public List<NominatedPerson> getAllNominatedPersons() throws SQLException {
         return nominatedPersonService.getAllNominatedPersons();
     }
+
+    @PostMapping("/withdraw")
+    public void withdrawFromElection(@RequestParam Integer userId) throws SQLException {
+        nominatedPersonService.withdrawFromElection(userId);
+    }
+
+    @GetMapping("/top5")
+    public List<NominatedPerson> getTop5() throws SQLException {
+        return nominatedPersonService.getTop5();
+    }
 }
