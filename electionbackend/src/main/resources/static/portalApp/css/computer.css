@@ -322,7 +322,15 @@
     }
     /*------------VOTE site --------------------*/
 
+    .vote-box1{
+        border: solid 2px red;
+        list-style: none;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 5px 5px;
 
+}
 
     .vote-box{
         list-style: none;
@@ -331,6 +339,7 @@
         text-align: center;
         padding: 5px 5px;
         border: solid 2px grey;
+
     }
 
     .vote-btn{
