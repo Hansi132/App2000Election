@@ -7,7 +7,7 @@
             <ul class="vote-box" ng-repeat="nominee in nominatedUser">
                 <li>{{ nominee.email }}</li>
                 <li>{{ nominee.name }}</li>
-                <button class="vote-btn" ng-click="nominatePerson(user.id)">Stem på kandidat</button>
+                <button class="vote-btn" ng-if="$root.user.hasVoted == 0" ng-click="voteOnPerson(nominee.id)">Stem på kandidat</button>
             </ul>
         </div>
     </div>

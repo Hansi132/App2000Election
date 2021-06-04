@@ -3,22 +3,22 @@ package com.app2000.electionbackend.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NominatedPerson {
-    private final int UserId;
-    private final String Faculty;
-    private final String Institute;
-    private final String Information;
-    private final int Votes;
+    private int UserId;
+    private String Faculty;
+    private String Institute;
+    private String Information;
+    private int Votes;
 
     public NominatedPerson(@JsonProperty("userId") int userId,
                            @JsonProperty("faculty") String faculty,
                            @JsonProperty("institute") String institute,
                            @JsonProperty("information") String information,
                            @JsonProperty("votes") int votes) {
-        UserId = userId;
-        Faculty = faculty;
-        Institute = institute;
-        Information = information;
-        Votes = votes;
+        this.UserId = userId;
+        this.Faculty = faculty;
+        this.Institute = institute;
+        this.Information = information;
+        this.Votes = votes;
     }
 
     public int getVotes() {
