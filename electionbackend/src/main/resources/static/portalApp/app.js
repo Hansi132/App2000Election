@@ -63,6 +63,14 @@ angular.module('myApp', [
                             params: {userId: item.userId}
                         }).then(function success(response) {
                             $rootScope.top5.push(response.data);
+                            $http({
+                                method: 'GET',
+                                url: 'http://localhost:8080/api/v1/election/active',
+                                params: {electionStart1: new Date().getTime(), electionEnd1: new Date().getTime()}
+                            }).then(function success(response) {
+                                $rootScope.election = response.data;
+                                console.log($rootScope.election);
+                            })
                         })
                     });
                 })

@@ -27,7 +27,7 @@ public class ElectionService {
         electionDB.createElection(election);
     }
 
-    public Election getActiveElection(Date electionStart, Date electionEnd) throws SQLException {
+    public Boolean getActiveElection(Date electionStart, Date electionEnd) throws SQLException {
         return electionDB.getActiveElection(electionStart, electionEnd);
     }
 }

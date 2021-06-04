@@ -20,4 +20,21 @@ angular.module('myApp.view1', ['ngRoute'])
     })
   }
 
+  $scope.createNewElection = function () {
+    let dateStart = new Date().getTime();
+    let dateEnd = new Date().getTime();
+    dateEnd = dateEnd + 2592000000;
+    $http({
+      method: 'POST',
+      url: 'http://localhost:8080/api/v1/election',
+      data: {
+        "electionId": 0,
+        "electionStart": dateStart,
+        "electionEnd": dateEnd,
+        "controlled": false,
+        "electedUserId": null
+      }
+    })
+  }
+
 });

@@ -35,11 +35,11 @@
             <i  class="fas fa-user"></i>
             <span >Min side</span>
         </a>
-        <a href="#!/view2" >
+        <a href="#!/view2" ng-if="$root.election">
             <i  class="fas fa-comments"></i>
             <span >Nominering</span>
         </a>
-        <a href="#!/vote" >
+        <a href="#!/vote" ng-if="$root.election">
             <i  class="fas fa-vote-yea"></i>
             <span >Avstemning</span>
         </a>

@@ -9,7 +9,7 @@
 
         <div class="box9">
             <button class="minside-btn1" ng-click="withdrawFromElection($root.user.id)">Trekk fra valg</button>
-            <button class="minside-btn1" ng-if="($root.user.userType.userTypeId === 3)">Start nytt valg</button>
+            <button class="minside-btn1" ng-click="createNewElection()" ng-if="($root.user.userType.userTypeId === 3)">Start nytt valg</button>
             <button class="minside-btn1" ng-if="($root.user.userType.userTypeId === 2)">Start kontroll av valg</button>
         </div>
 

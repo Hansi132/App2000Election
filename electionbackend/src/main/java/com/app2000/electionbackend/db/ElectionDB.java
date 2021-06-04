@@ -11,5 +11,5 @@ public interface ElectionDB {
 
     void createElection(Election election) throws SQLException;
 
-    Election getActiveElection(Date electionStart, Date electionEnd) throws SQLException;
+    Boolean getActiveElection(Date electionStart, Date electionEnd) throws SQLException;
 }

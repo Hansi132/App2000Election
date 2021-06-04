@@ -32,7 +32,9 @@ public class ElectionController {
     }
 
     @GetMapping("/active")
-    public Election getActiveElection(@RequestParam Date electionStart, @RequestParam Date electionEnd) throws SQLException {
+    public Boolean getActiveElection(@RequestParam Long electionStart1, @RequestParam Long electionEnd1) throws SQLException {
+        Date electionStart = new Date(electionStart1);
+        Date electionEnd = new Date(electionEnd1);
         return electionService.getActiveElection(electionStart, electionEnd);
     }
 }

@@ -51,25 +51,19 @@ public class ElectionDataAccess implements ElectionDB {
         } else {
             insertStmt.setNull(4, Types.NULL);
         }
-
+        insertStmt.execute();
     }
 
     @Override
-    public Election getActiveElection(Date electionStart, Date electionEnd) throws SQLException {
-        String selectSql = "SELECT * FROM Election WHERE ElectionEnd < ? AND ElectionStart > ? LIMIT 1;";
+    public Boolean getActiveElection(Date electionStart, Date electionEnd) throws SQLException {
+        String selectSql = "SELECT * FROM Election WHERE ElectionEnd > ? LIMIT 1;";
         PreparedStatement selectStmt = connection.prepareStatement(selectSql);
         selectStmt.setDate(1, electionEnd);
-        selectStmt.setDate(2, electionStart);
         ResultSet resultSet = selectStmt.executeQuery();
         if (resultSet.next()) {
-            return new Election(
-                    resultSet.getInt("ElectionId"),
-                    resultSet.getDate("ElectionStart"),
-                    resultSet.getDate("ElectionEnd"),
-                    resultSet.getBoolean("Controlled"),
-                    resultSet.getInt("ElectedUserId"));
+            return true;
         } else {
-            return null;
+            return false;
         }
     }
 

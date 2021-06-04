@@ -16,10 +16,10 @@ public class Election {
     }
 
     public Election(@JsonProperty("electionId") Integer electionId,
-                    @JsonProperty("electionId") Date electionStart,
-                    @JsonProperty("electionId") Date electionEnd,
-                    @JsonProperty("electionId") Boolean controlled,
-                    @JsonProperty("electionId") Integer electedUserId) {
+                    @JsonProperty("electionStart") Date electionStart,
+                    @JsonProperty("electionEnd") Date electionEnd,
+                    @JsonProperty("controlled") Boolean controlled,
+                    @JsonProperty("electedUserId") Integer electedUserId) {
         this.electionId = electionId;
         this.electionStart = electionStart;
         this.electionEnd = electionEnd;
