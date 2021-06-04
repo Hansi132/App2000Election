@@ -24,6 +24,7 @@ angular.module('myApp.vote', ['ngRoute'])
                 }
             }).then(function success(response) {
                 console.log("Vote given");
+                document.getElementById('border').setAttribute("class", "vote-box1");
             })
         }
         $http({
