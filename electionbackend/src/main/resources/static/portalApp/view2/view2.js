@@ -9,6 +9,26 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', function view2Ctrl($scope, $http) {
 
-}]);
+  $http({
+    method: 'GET',
+    url: 'http://localhost:8080/api/v1/user'
+  }).then(function successCallback(response) {
+    $scope.users = response.data;
+  });
+
+  $scope.nominatePerson = function (id) {
+    $http({
+      method: 'POST',
+      url: 'http://localhost:8080/api/v1/nominatedPerson',
+      data: {
+        "userId": id,
+        "faculty": null,
+        "institute": null,
+        "information": null,
+        "votes": 0
+      }
+    })
+  }
+});

@@ -34,4 +34,8 @@ public class UserService {
     public int updateVote(String email, User user) throws SQLException {
         return userDB.updateVote(email, user);
     }
+
+    public User selectUserOnId(Integer userId) throws SQLException {
+        return userDB.selectUserOnId(userId);
+    }
 }

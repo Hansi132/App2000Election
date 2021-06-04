@@ -34,4 +34,9 @@ public class UserController {
     public User selectOneUser(@RequestParam String email) throws SQLException {
         return userService.selectOneUser(email);
     }
+
+    @GetMapping("/userId")
+    public User selectUserOnId(@RequestParam Integer userId) throws SQLException {
+        return userService.selectUserOnId(userId);
+    }
 }

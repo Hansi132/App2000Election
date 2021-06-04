@@ -39,7 +39,7 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
 
     @Override
     public int insertNominatedPerson(NominatedPerson nominatedPerson) throws SQLException {
-        String insertSql = "INSERT INTO NominatedPerson VALUES (?,?,?,?,?,?);";
+        String insertSql = "INSERT INTO NominatedPerson VALUES (?,?,?,?,?);";
         PreparedStatement insertStmt = connection.prepareStatement(insertSql);
         insertStmt.setInt(1, nominatedPerson.getUserId());
         insertStmt.setString(2, nominatedPerson.getFaculty());

@@ -14,4 +14,6 @@ public interface UserDB {
     User selectOneUser(String email) throws SQLException;
 
     int updateVote(String email, User user) throws SQLException;
+
+    User selectUserOnId(Integer userId) throws SQLException;
 }

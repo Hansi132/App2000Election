@@ -79,4 +79,20 @@ public class UserDataAccess implements UserDB {
         updateStmt.execute();
         return 1;
     }
+
+    @Override
+    public User selectUserOnId(Integer userId) throws SQLException {
+        String selectSql = "SELECT * FROM User WHERE UserId = ?;";
+        PreparedStatement selectStmt = connection.prepareStatement(selectSql);
+        selectStmt.setInt(1, userId);
+        ResultSet resultSet = selectStmt.executeQuery();
+        if (resultSet.next()) {
+            return new User(
+                    resultSet.getInt("UserId"), resultSet.getString("Email"),
+                    resultSet.getInt("UserTypeId"), resultSet.getString("Name"),
+                    resultSet.getInt("PictureId"), resultSet.getBoolean("hasVoted"));
+        } else {
+            return null;
+        }
+    }
 }
