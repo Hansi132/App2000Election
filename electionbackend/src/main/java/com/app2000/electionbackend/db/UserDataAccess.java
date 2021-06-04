@@ -1,6 +1,7 @@
 package com.app2000.electionbackend.db;
 
 import com.app2000.electionbackend.model.User;
+import com.app2000.electionbackend.model.UserType;
 import com.app2000.electionbackend.util.DatabaseConnection;
 import org.springframework.stereotype.Repository;
 
@@ -78,5 +79,34 @@ public class UserDataAccess implements UserDB {
         updateStmt.setString(2, email);
         updateStmt.execute();
         return 1;
+    }
+
+    @Override
+    public User selectUserOnId(Integer userId) throws SQLException {
+        String selectSql = "SELECT * FROM User WHERE UserId = ?;";
+        PreparedStatement selectStmt = connection.prepareStatement(selectSql);
+        selectStmt.setInt(1, userId);
+        ResultSet resultSet = selectStmt.executeQuery();
+        if (resultSet.next()) {
+            return new User(
+                    resultSet.getInt("UserId"), resultSet.getString("Email"),
+                    resultSet.getInt("UserTypeId"), resultSet.getString("Name"),
+                    resultSet.getInt("PictureId"), resultSet.getBoolean("hasVoted"));
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public UserType getUserType(Integer userId) throws SQLException {
+        String selectSql = "SELECT * FROM UserType LEFT JOIN User U on UserType.UserTypeId = U.UserTypeId WHERE UserId = ?;";
+        PreparedStatement selectStmt = connection.prepareStatement(selectSql);
+        selectStmt.setInt(1, userId);
+        ResultSet rs = selectStmt.executeQuery();
+        if (rs.next()) {
+            return new UserType(rs.getInt("UserType.UserTypeId"), rs.getString("UserTypeDesc"));
+        } else {
+            return null;
+        }
     }
 }

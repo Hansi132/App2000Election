@@ -5,10 +5,8 @@
 
     <div class="box7">
       <ul class="vote-box" ng-repeat="user in users">
-        <li>{{ user.fname }}</li>
-        <li>{{ user.lname }}</li>
-        <li>{{ user.gender }}</li>
-        <li>{{ user.fDate }}</li>
+        <li>{{ user.email }}</li>
+        <li>{{ user.name }}</li>
         <button class="vote-btn" ng-click="nominatePerson(user.id)">Nominer kandidtat</button>
       </ul>
     </div>

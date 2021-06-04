@@ -4,11 +4,9 @@
         <h1 class="title-vote">Her kan du stemme på den kandidaten du mener fortjener å vinne USN sitt skolevalg 2021</h1>
 
         <div class="box7">
-            <ul class="vote-box" ng-repeat="user in users">
-                <li>{{ user.fname }}</li>
-                <li>{{ user.lname }}</li>
-                <li>{{ user.gender }}</li>
-                <li>{{ user.fDate }}</li>
+            <ul class="vote-box" ng-repeat="nominee in nominatedUser">
+                <li>{{ nominee.email }}</li>
+                <li>{{ nominee.name }}</li>
                 <button class="vote-btn" ng-click="nominatePerson(user.id)">Stem på kandidat</button>
             </ul>
         </div>

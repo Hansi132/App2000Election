@@ -23,8 +23,22 @@ angular.module('myApp', [
         url: 'http://localhost:8080/api/v1/userInfo'
     }).then(function successCallback(response) {
         $rootScope.user = response.data;
+        $http({
+            method: 'GET',
+            url: 'http://localhost:8080/api/v1/user/email',
+            params: {email: $rootScope.user.email}
+        }).then(function success(response) {
+            $rootScope.user = response.data;
+            $http({
+                method: 'GET',
+                url: 'http://localhost:8080/api/v1/user/userType',
+                params: {userId: $rootScope.user.id}
+            }).then(function success(response) {
+                $rootScope.user.userType = response.data;
+                console.log($rootScope);
+            })
+        })
     });
-
 }).run( function($rootScope, $location) {
 
 })

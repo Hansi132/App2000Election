@@ -1,6 +1,7 @@
 package com.app2000.electionbackend.api;
 
 import com.app2000.electionbackend.model.User;
+import com.app2000.electionbackend.model.UserType;
 import com.app2000.electionbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,5 +34,15 @@ public class UserController {
     @GetMapping("/email")
     public User selectOneUser(@RequestParam String email) throws SQLException {
         return userService.selectOneUser(email);
+    }
+
+    @GetMapping("/userId")
+    public User selectUserOnId(@RequestParam Integer userId) throws SQLException {
+        return userService.selectUserOnId(userId);
+    }
+
+    @GetMapping("/userType")
+    public UserType getUserType(@RequestParam Integer userId) throws SQLException {
+        return userService.getUserType(userId);
     }
 }
