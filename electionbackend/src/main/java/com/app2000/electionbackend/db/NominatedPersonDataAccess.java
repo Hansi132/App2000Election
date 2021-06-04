@@ -67,4 +67,30 @@ public class NominatedPersonDataAccess implements NominatedPersonDB{
         }
         return nominatedPersonList;
     }
+
+    @Override
+    public void withdrawFromElection(Integer userId) throws SQLException {
+        String deleteSql = "DELETE FROM NominatedPerson WHERE UserId = ?";
+        PreparedStatement ps = connection.prepareStatement(deleteSql);
+        ps.setInt(1, userId);
+        ps.execute();
+    }
+
+    @Override
+    public List<NominatedPerson> getTop5() throws SQLException{
+        List<NominatedPerson> nominatedPersonList = new ArrayList<>();
+        String selectSql = "SELECT * FROM NominatedPerson ORDER BY Votes DESC LIMIT 5;";
+        PreparedStatement selectStmt = connection.prepareStatement(selectSql);
+        ResultSet resultSet = selectStmt.executeQuery();
+        while (resultSet.next()) {
+            NominatedPerson nominatedPerson = new NominatedPerson(
+                    resultSet.getInt("UserId"),
+                    resultSet.getString("Faculty"),
+                    resultSet.getString("Institute"),
+                    resultSet.getString("Information"),
+                    resultSet.getInt("Votes"));
+            nominatedPersonList.add(nominatedPerson);
+        }
+        return nominatedPersonList;
+    }
 }

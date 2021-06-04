@@ -13,4 +13,7 @@ public interface NominatedPersonDB {
 
     List<NominatedPerson> getAllNominatedPerson() throws SQLException;
 
+    void withdrawFromElection(Integer userId) throws SQLException;
+
+    List<NominatedPerson> getTop5() throws SQLException;
 }

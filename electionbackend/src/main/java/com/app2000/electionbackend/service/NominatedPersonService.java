@@ -29,4 +29,12 @@ public class NominatedPersonService {
     public boolean addVote(NominatedPerson nominatedPerson) throws SQLException {
         return nominatedPersonDB.addVote(nominatedPerson);
     }
+
+    public void withdrawFromElection(Integer userId) throws SQLException{
+        nominatedPersonDB.withdrawFromElection(userId);
+    }
+
+    public List<NominatedPerson> getTop5() throws SQLException {
+        return nominatedPersonDB.getTop5();
+    }
 }

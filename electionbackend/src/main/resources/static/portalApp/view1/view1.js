@@ -11,10 +11,13 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', function View1Ctrl($scope, $http) {
   $scope.myNumber = 5;
-  $http({
-    method: 'GET',
-    url: 'http://localhost:8080/api/v1/nominatedPerson'
-  }).then(function successCallback(response) {
-    $scope.nominatedUsers = response.data;
-  });
+
+  $scope.withdrawFromElection = function (userId) {
+    $http({
+      method: 'POST',
+      url: 'http://localhost:8080/api/v1/nominatedPerson/withdraw',
+      params: {userId: userId}
+    })
+  }
+
 });
